@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dg203t2tij4kt"
+path="res://.godot/imported/yt5s.com - Fire Whoosh Sound Effect Commercial (128 kbps).mp3-69f9f687217be045803cbebe52012ae8.mp3str"
+
+[deps]
+
+source_file="res://Assets/yt5s.com - Fire Whoosh Sound Effect Commercial (128 kbps).mp3"
+dest_files=["res://.godot/imported/yt5s.com - Fire Whoosh Sound Effect Commercial (128 kbps).mp3-69f9f687217be045803cbebe52012ae8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
