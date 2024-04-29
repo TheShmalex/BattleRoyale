@@ -1,19 +1,19 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714403336
+::res://::1714403673
 icon.svg::CompressedTexture2D::5895987162902315111::1713231744::1713231750::1::::<><>::
 README.md::TextFile::-1::1714402607::0::1::::<><>::
 root.gd::GDScript::-1::1714252517::0::1::::<>Control<>::
 root.tscn::PackedScene::2778560990386876655::1714403152::0::1::::<><>::res://root.gd
-::res://Assets/::1714403336
+::res://Assets/::1714403673
 brLogo.png::CompressedTexture2D::1547114436873583852::1713369809::1713544154::1::::<><>::
-fart.mp3::AudioStreamMP3::7637702279843333443::1713590271::1714403336::1::::<><>::
 forbSym.gd::GDScript::-1::1713311085::0::1::::<>Sprite2D<>::
 gear.png::CompressedTexture2D::6996236900712568314::1713929440::1713929442::1::::<><>::
-glow.gdshader::Shader::-1::1714403153::0::1::::<><>::
+glow.gdshader::Shader::-1::1714403338::0::1::::<><>::
 gun.png::CompressedTexture2D::7986862506516825613::1713547548::1713547596::1::::<><>::
-invertUnder.gdshader::Shader::-1::1714403153::0::1::::<><>::
+invertUnder.gdshader::Shader::-1::1714403338::0::1::::<><>::
 map.png::CompressedTexture2D::15952699111784302::1713231923::1713544154::1::::<><>::
 PanelStyleBox.tres::StyleBoxFlat::4989907454334689143::1714078470::0::1::::<><>::
+poop.mp3::AudioStreamMP3::7637702279843333443::1713590271::1714403674::1::::<><>::
 skull.png::CompressedTexture2D::8521792274338802048::1713307537::1713544154::1::::<><>::
 striptes.png::CompressedTexture2D::7648665442953028216::1713292374::1713544154::1::::<><>::
 sword.png::CompressedTexture2D::9180559370731281264::1713547593::1713547596::1::::<><>::
@@ -55,8 +55,8 @@ Map.png::CompressedTexture2D::5570658572392699463::1713231826::1713555062::1::::
 06.png::CompressedTexture2D::8280854150605677910::1713546143::1713546148::1::::<><>::
 07.png::CompressedTexture2D::3179434059528800615::1713546143::1713546148::1::::<><>::
 All.png::CompressedTexture2D::4126792536417226814::1713546143::1713546148::1::::<><>::
-::res://Assets/Shaders/::1714403153
-dissolve.gdshader::Shader::-1::1714403153::0::1::::<><>::
+::res://Assets/Shaders/::1714403338
+dissolve.gdshader::Shader::-1::1714403338::0::1::::<><>::
 ::res://Assets/Smoke/::1713237063
 ::res://Assets/Smoke/FX001/::1713555062
 FX001_01.png::CompressedTexture2D::1217695553966589203::1713237063::1713555062::1::::<><>::
@@ -110,8 +110,8 @@ PlayAreaSettingsButton.gd::GDScript::-1::1714071770::0::1::::<>Button<>::
 PlayerCard.gd::GDScript::-1::1714252341::0::1::::<>Panel<>::
 PlayerCard.tscn::PackedScene::4800764815443948430::1714403153::0::1::::<><>::uid://dp8kptpywc167::::res://Assets/Pixel UI pack 3/06.png<>res://Screens/PlayArea/PlayerCard.gd<>uid://dl15puekqcitx::::res://Assets/gun.png<>uid://d32eqbdnedwr5::::res://Assets/sword.png
 smoke_poof.gd::GDScript::-1::1713403571::0::1::::<>AnimatedSprite2D<>::
-::res://Screens/RosterSelect/::1714403153
-RosterSelect.tscn::PackedScene::3176766481371067177::1714403153::0::1::::<><>::uid://cddfbubab83i6::::res://Assets/PanelStyleBox.tres<>uid://canr5o0nrkhuk::::res://Screens/PlayArea/PlayerCard.tscn
+::res://Screens/RosterSelect/::1714403338
+RosterSelect.tscn::PackedScene::3176766481371067177::1714403338::0::1::::<><>::uid://cddfbubab83i6::::res://Assets/PanelStyleBox.tres<>uid://canr5o0nrkhuk::::res://Screens/PlayArea/PlayerCard.tscn
 ::res://Screens/RosterView/::1714403153
 RosterView.tscn::PackedScene::20668520122152061::1714403153::0::1::::<><>::uid://cddfbubab83i6::::res://Assets/PanelStyleBox.tres<>uid://canr5o0nrkhuk::::res://Screens/PlayArea/PlayerCard.tscn
 ::res://Screens/Settings/::1714403152
