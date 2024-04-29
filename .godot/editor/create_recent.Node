@@ -1,3 +1,4 @@
+AnimationTree
 RichTextLabel
 Label
 Panel
@@ -9,7 +10,5 @@ VBoxContainer
 ScrollContainer
 ColorRect
 AnimationPlayer
-AnimationTree
 MenuBar
 TextureRect
-SubViewport
