@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bli346ck35mw4"]
+[gd_scene load_steps=4 format=3 uid="uid://bli346ck35mw4"]
 
 [ext_resource type="StyleBox" uid="uid://cddfbubab83i6" path="res://Assets/PanelStyleBox.tres" id="1_l7n77"]
-[ext_resource type="PackedScene" uid="uid://canr5o0nrkhuk" path="res://Screens/PlayArea/PlayerCard.tscn" id="2_3hdlq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w601p"]
 
@@ -60,36 +59,6 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_w601p")
 
-[node name="card" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_3hdlq")]
-layout_mode = 2
-
-[node name="card2" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_3hdlq")]
-layout_mode = 2
-
-[node name="card3" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_3hdlq")]
-layout_mode = 2
-
-[node name="card4" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_3hdlq")]
-layout_mode = 2
-
-[node name="card5" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_3hdlq")]
-layout_mode = 2
-
-[node name="card6" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_3hdlq")]
-layout_mode = 2
-
-[node name="card7" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_3hdlq")]
-layout_mode = 2
-
-[node name="card8" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_3hdlq")]
-layout_mode = 2
-
-[node name="card9" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_3hdlq")]
-layout_mode = 2
-
-[node name="card10" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_3hdlq")]
-layout_mode = 2
-
 [node name="Panel" type="Panel" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
@@ -100,18 +69,3 @@ anchor_bottom = 0.974
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_asemp")
 metadata/_edit_use_anchors_ = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Panel"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -0.5
-offset_right = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/text_highlight_h_padding = 6
-text = ":D"
