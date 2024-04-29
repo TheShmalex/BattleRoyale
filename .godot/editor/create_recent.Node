@@ -1,3 +1,5 @@
+RichTextLabel
+Label
 Panel
 Node
 Button
@@ -9,6 +11,5 @@ ColorRect
 AnimationPlayer
 AnimationTree
 MenuBar
-Label
 TextureRect
 SubViewport
