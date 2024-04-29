@@ -1,0 +1,204 @@
+[gd_scene load_steps=20 format=3 uid="uid://canr5o0nrkhuk"]
+
+[ext_resource type="Texture2D" uid="uid://dp8kptpywc167" path="res://Assets/Pixel UI pack 3/06.png" id="1_2o6e4"]
+[ext_resource type="Script" path="res://Screens/PlayArea/PlayerCard.gd" id="1_yxlvh"]
+[ext_resource type="Texture2D" uid="uid://dl15puekqcitx" path="res://Assets/gun.png" id="2_8q53u"]
+[ext_resource type="Texture2D" uid="uid://d32eqbdnedwr5" path="res://Assets/sword.png" id="3_dtv7u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmwkb"]
+bg_color = Color(0.145098, 0.145098, 0.145098, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_uja53"]
+Panel/styles/panel = SubResource("StyleBoxFlat_dmwkb")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldrl2"]
+atlas = ExtResource("1_2o6e4")
+region = Rect2(0, 48, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjm85"]
+atlas = ExtResource("1_2o6e4")
+region = Rect2(48, 48, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xadrx"]
+atlas = ExtResource("1_2o6e4")
+region = Rect2(96, 48, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78ql0"]
+atlas = ExtResource("1_2o6e4")
+region = Rect2(144, 48, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfm04"]
+atlas = ExtResource("1_2o6e4")
+region = Rect2(192, 48, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_llrwd"]
+atlas = ExtResource("1_2o6e4")
+region = Rect2(0, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8w6wb"]
+atlas = ExtResource("1_2o6e4")
+region = Rect2(48, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jh3hr"]
+atlas = ExtResource("1_2o6e4")
+region = Rect2(96, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4jfk"]
+atlas = ExtResource("1_2o6e4")
+region = Rect2(144, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rcj7"]
+atlas = ExtResource("1_2o6e4")
+region = Rect2(192, 64, 48, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xv88q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldrl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjm85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xadrx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78ql0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfm04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_llrwd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8w6wb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jh3hr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4jfk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rcj7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkrov"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nq755"]
+
+[node name="PlayerCard" type="Control"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 3
+anchor_right = 0.173611
+anchor_bottom = 0.115741
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 0
+anchor_right = 1.01
+anchor_bottom = 1.02667
+offset_bottom = -2.0
+theme_override_constants/margin_left = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="card" type="Panel" parent="MarginContainer"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+theme = SubResource("Theme_uja53")
+script = ExtResource("1_yxlvh")
+metadata/_edit_use_anchors_ = true
+
+[node name="MeleeBar" type="AnimatedSprite2D" parent="MarginContainer/card"]
+texture_filter = 1
+position = Vector2(169, 42)
+scale = Vector2(1.2, 1.57452)
+sprite_frames = SubResource("SpriteFrames_xv88q")
+frame = 8
+
+[node name="ShootingBar" type="AnimatedSprite2D" parent="MarginContainer/card"]
+texture_filter = 1
+position = Vector2(169, 63)
+scale = Vector2(1.2, 1.57452)
+sprite_frames = SubResource("SpriteFrames_xv88q")
+frame = 4
+
+[node name="location" type="Label" parent="MarginContainer/card"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.045
+anchor_top = 0.4
+anchor_right = 0.31
+anchor_bottom = 0.706667
+text = "Loc"
+metadata/_edit_use_anchors_ = true
+
+[node name="nature" type="Label" parent="MarginContainer/card"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.045
+anchor_top = 0.666667
+anchor_right = 0.31
+anchor_bottom = 0.973333
+text = "Nat
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Gun" type="Sprite2D" parent="MarginContainer/card"]
+position = Vector2(133.25, 64.5)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_8q53u")
+
+[node name="Sword" type="Sprite2D" parent="MarginContainer/card"]
+position = Vector2(133, 42)
+scale = Vector2(3.08333, 3.08333)
+texture = ExtResource("3_dtv7u")
+region_enabled = true
+region_rect = Rect2(0, 1, 3, 4)
+
+[node name="NameContainer" type="HBoxContainer" parent="MarginContainer/card"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.595
+anchor_bottom = 0.426666
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/card/NameContainer"]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mkrov")
+
+[node name="lName" type="Label" parent="MarginContainer/card/NameContainer"]
+texture_filter = 1
+layout_mode = 2
+text = "Lname"
+metadata/_edit_use_anchors_ = true
+
+[node name="lName2" type="Label" parent="MarginContainer/card/NameContainer"]
+texture_filter = 1
+layout_mode = 2
+text = ","
+metadata/_edit_use_anchors_ = true
+
+[node name="fName" type="Label" parent="MarginContainer/card/NameContainer"]
+texture_filter = 1
+layout_mode = 2
+text = "Fname"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nq755")

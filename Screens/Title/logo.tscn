@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgj34ff6f80u2"]
+
+[ext_resource type="Texture2D" uid="uid://wbo0pso7wdhc" path="res://Assets/brLogo.png" id="1_5exnm"]
+
+[node name="Logo" type="TextureRect"]
+texture = ExtResource("1_5exnm")

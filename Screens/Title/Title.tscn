@@ -1,0 +1,315 @@
+[gd_scene load_steps=20 format=3 uid="uid://nshl7tc8yuwx"]
+
+[ext_resource type="Shader" path="res://Assets/Shaders/dissolve.gdshader" id="1_1lofi"]
+[ext_resource type="Script" path="res://Screens/Title/LogoContainer.gd" id="2_c5atx"]
+[ext_resource type="Texture2D" uid="uid://wbo0pso7wdhc" path="res://Assets/brLogo.png" id="3_7w0vp"]
+[ext_resource type="FontFile" uid="uid://qtft75odk5ns" path="res://Assets/battle-royale-font/BATTLE ROYALE FONT.otf" id="4_gixph"]
+[ext_resource type="FontFile" uid="uid://cdxhauglmwuvy" path="res://Assets/source-sans-pro/SourceSansPro-Bold.ttf" id="5_wd5ox"]
+[ext_resource type="Script" path="res://Screens/Title/beginButton.gd" id="6_vigq7"]
+[ext_resource type="Script" path="res://Screens/Title/settingButton.gd" id="7_qh6du"]
+[ext_resource type="Script" path="res://Screens/Title/Quit.gd" id="8_2q75x"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_3gv0h"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_fprbq"]
+width = 1000
+height = 1000
+noise = SubResource("FastNoiseLite_3gv0h")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kxddp"]
+shader = ExtResource("1_1lofi")
+shader_parameter/dissolve_value = 0.0
+shader_parameter/burn_size = 0.1
+shader_parameter/burn_color = Color(1, 0, 0, 1)
+shader_parameter/dissolve_texture = SubResource("NoiseTexture2D_fprbq")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hjlvc"]
+bg_color = Color(0.882353, 0.156863, 0.207843, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_7unsl"]
+base_font = ExtResource("4_gixph")
+spacing_glyph = 26
+spacing_top = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmvyr"]
+bg_color = Color(0.341176, 0.341176, 0.341176, 1)
+border_width_bottom = 5
+border_color = Color(0.180392, 0.180392, 0.180392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkqg0"]
+bg_color = Color(0.341176, 0.341176, 0.341176, 1)
+
+[sub_resource type="Theme" id="Theme_g82ec"]
+Button/font_sizes/font_size = 37
+Button/fonts/font = ExtResource("5_wd5ox")
+Button/styles/disabled = null
+Button/styles/normal = SubResource("StyleBoxFlat_cmvyr")
+Button/styles/pressed = SubResource("StyleBoxFlat_lkqg0")
+
+[sub_resource type="Animation" id="Animation_gre8e"]
+resource_name = "buttonSlide"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Begin:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2.5, 4.5),
+"transitions": PackedFloat32Array(0.1, 6),
+"update": 0,
+"values": [Vector2(424, 700), Vector2(424, 380)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Settings:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3, 5),
+"transitions": PackedFloat32Array(0.1, 6),
+"update": 0,
+"values": [Vector2(490, 700), Vector2(490, 450)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LogoContainer:disVal")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 3),
+"transitions": PackedFloat32Array(1.68179, 0.406126),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Quit:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3.7, 4.4),
+"transitions": PackedFloat32Array(0.287175, 8),
+"update": 0,
+"values": [Vector2(536, 648), Vector2(536, 576)]
+}
+
+[sub_resource type="Animation" id="Animation_5ltnl"]
+resource_name = "buttonSlide"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Begin:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.8),
+"transitions": PackedFloat32Array(1.91184, 0.1),
+"update": 0,
+"values": [Vector2(424, 380), Vector2(424, 700)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Settings:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1.60766, 0.1),
+"update": 0,
+"values": [Vector2(490, 450), Vector2(490, 700)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LogoContainer:disVal")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1.93187, 12.5533),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Begin")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"exit"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Settings")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"exit"
+}]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Quit:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.554785, 1.27456),
+"update": 0,
+"values": [Vector2(536, 576), Vector2(536, 648)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tpico"]
+_data = {
+"enter": SubResource("Animation_gre8e"),
+"exit": SubResource("Animation_5ltnl")
+}
+
+[node name="Title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LogoContainer" type="SubViewportContainer" parent="."]
+material = SubResource("ShaderMaterial_kxddp")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.190972
+anchor_top = 0.0385802
+anchor_right = 0.809028
+anchor_bottom = 0.557099
+offset_right = -0.000549316
+offset_bottom = -0.000183105
+grow_horizontal = 2
+script = ExtResource("2_c5atx")
+
+[node name="SubViewport" type="SubViewport" parent="LogoContainer"]
+handle_input_locally = false
+size = Vector2i(712, 336)
+render_target_update_mode = 4
+
+[node name="Logo" type="TextureRect" parent="LogoContainer/SubViewport"]
+offset_right = 712.0
+offset_bottom = 336.0
+texture = ExtResource("3_7w0vp")
+
+[node name="RemasterCover" type="Panel" parent="LogoContainer/SubViewport/Logo"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.216292
+anchor_top = 0.467262
+anchor_right = 0.786517
+anchor_bottom = 0.532738
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hjlvc")
+
+[node name="Simulator" type="Label" parent="LogoContainer/SubViewport/Logo/RemasterCover"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.0227273
+anchor_right = 1.0
+anchor_bottom = 1.02273
+offset_top = -0.5
+offset_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_7unsl")
+text = "SIMULATOR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Begin" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.371094
+anchor_top = 0.459105
+anchor_right = 0.628906
+anchor_bottom = 0.540895
+offset_left = -3.50027
+offset_top = 402.5
+offset_right = -3.50024
+offset_bottom = 402.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_g82ec")
+theme_override_font_sizes/font_size = 34
+text = "THE GAME BEGINS"
+script = ExtResource("6_vigq7")
+metadata/_edit_use_anchors_ = true
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.425347
+anchor_top = 0.703704
+anchor_right = 0.574653
+anchor_bottom = 0.790125
+offset_left = 0.000244141
+offset_top = 244.0
+offset_right = 0.000244141
+offset_bottom = 244.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_g82ec")
+text = "SETTINGS"
+script = ExtResource("7_qh6du")
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.464844
+anchor_top = 0.864198
+anchor_right = 0.535156
+anchor_bottom = 0.945988
+offset_left = 0.499756
+offset_top = 87.9997
+offset_right = 0.499756
+offset_bottom = 87.9998
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+theme = SubResource("Theme_g82ec")
+text = "Quit
+"
+script = ExtResource("8_2q75x")
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tpico")
+}
+autoplay = "enter"
+speed_scale = 6.895
+
+[connection signal="pressed" from="Begin" to="Begin" method="_on_pressed"]
+[connection signal="pressed" from="Settings" to="Settings" method="_on_pressed"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="Begin" method="_on_animation_player_animation_finished"]

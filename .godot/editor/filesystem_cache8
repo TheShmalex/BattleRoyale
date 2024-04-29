@@ -1,0 +1,129 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1714402823
+icon.svg::CompressedTexture2D::5895987162902315111::1713231744::1713231750::1::::<><>::
+root.gd::GDScript::-1::1714252517::0::1::::<>Control<>::
+root.tscn::PackedScene::2778560990386876655::1714402805::0::1::::<><>::res://root.gd
+::res://Assets/::1714402818
+brLogo.png::CompressedTexture2D::1547114436873583852::1713369809::1713544154::1::::<><>::
+forbSym.gd::GDScript::-1::1713311085::0::1::::<>Sprite2D<>::
+gear.png::CompressedTexture2D::6996236900712568314::1713929440::1713929442::1::::<><>::
+glow.gdshader::Shader::-1::1714402818::0::1::::<><>::
+gun.png::CompressedTexture2D::7986862506516825613::1713547548::1713547596::1::::<><>::
+invertUnder.gdshader::Shader::-1::1714402818::0::1::::<><>::
+map.png::CompressedTexture2D::15952699111784302::1713231923::1713544154::1::::<><>::
+PanelStyleBox.tres::StyleBoxFlat::4989907454334689143::1714078470::0::1::::<><>::
+skull.png::CompressedTexture2D::8521792274338802048::1713307537::1713544154::1::::<><>::
+striptes.png::CompressedTexture2D::7648665442953028216::1713292374::1713544154::1::::<><>::
+sword.png::CompressedTexture2D::9180559370731281264::1713547593::1713547596::1::::<><>::
+x.png::CompressedTexture2D::6215221326337009050::1713893686::1713893689::1::::<><>::
+yt5s.com - Fire Whoosh Sound Effect Commercial (128 kbps).mp3::AudioStreamMP3::7637702279843333443::1713590271::1713590352::1::::<><>::
+::res://Assets/battle-royale-font/::1713555063
+Battle royale font cover.jpg::CompressedTexture2D::2862061430686920182::1713370571::1713555062::1::::<><>::
+BATTLE ROYALE FONT.otf::FontFile::1162583918315549444::1713370571::1713555062::1::::<><>::
+battle royale preview.jpg::CompressedTexture2D::6310188308333629959::1713370571::1713555063::1::::<><>::
+LICENSE BATTLE ROYALE.txt::TextFile::-1::1713370571::0::1::::<><>::
+::res://Assets/fff-forward/::1713555062
+FFFFORWA.TTF::FontFile::7213683182986211761::1713374667::1713555062::1::::<><>::
+read_me.txt::TextFile::-1::1713374667::0::1::::<><>::
+::res://Assets/LightFX/::1713237063
+::res://Assets/LightFX/FX003/::1713555062
+FX003_01.png::CompressedTexture2D::5778219711755393296::1713237063::1713555062::1::::<><>::
+FX003_02.png::CompressedTexture2D::8036749875703887140::1713237063::1713555062::1::::<><>::
+FX003_03.png::CompressedTexture2D::5684738078586547493::1713237063::1713555062::1::::<><>::
+FX003_04.png::CompressedTexture2D::767919767892887121::1713237063::1713555062::1::::<><>::
+FX003_05.png::CompressedTexture2D::1292576407516110593::1713237063::1713555062::1::::<><>::
+::res://Assets/minecraft-font/::1714251722
+info.txt::TextFile::-1::1714251704::0::1::::<><>::
+MinecraftBold-nMK1.otf::FontFile::3257472389025513544::1714251704::1714251722::1::::<><>::
+MinecraftBoldItalic-1y1e.otf::FontFile::5929019510176407121::1714251704::1714251722::1::::<><>::
+MinecraftItalic-R8Mo.otf::FontFile::278505995554445230::1714251704::1714251722::1::::<><>::
+MinecraftRegular-Bmg3.otf::FontFile::2652049309695040203::1714251704::1714251722::1::::<><>::
+::res://Assets/pdf2png/::1713231798
+::res://Assets/pdf2png/bk_sans_006105/::1713555062
+bk_sans_006105-1.png::CompressedTexture2D::4374339161269711276::1713231798::1713555062::1::::<><>::
+bk_sans_006105-2.png::CompressedTexture2D::5326787099454117751::1713231798::1713555062::1::::<><>::
+bk_sans_006105-3.png::CompressedTexture2D::8320389672735036780::1713231798::1713555062::1::::<><>::
+Map.png::CompressedTexture2D::5570658572392699463::1713231826::1713555062::1::::<><>::
+::res://Assets/Pixel UI pack 3/::1713546148
+00.png::CompressedTexture2D::7771719262850902713::1713546143::1713546148::1::::<><>::
+01.png::CompressedTexture2D::6673651258715001870::1713546143::1713546148::1::::<><>::
+02.png::CompressedTexture2D::4781461361524185825::1713546143::1713546148::1::::<><>::
+03.png::CompressedTexture2D::2915642544139873604::1713546143::1713546148::1::::<><>::
+04.png::CompressedTexture2D::8844858659189452802::1713546143::1713546148::1::::<><>::
+05.png::CompressedTexture2D::2158900007755101830::1713546143::1713546148::1::::<><>::
+06.png::CompressedTexture2D::8280854150605677910::1713546143::1713546148::1::::<><>::
+07.png::CompressedTexture2D::3179434059528800615::1713546143::1713546148::1::::<><>::
+All.png::CompressedTexture2D::4126792536417226814::1713546143::1713546148::1::::<><>::
+::res://Assets/Shaders/::1714402818
+dissolve.gdshader::Shader::-1::1714402818::0::1::::<><>::
+::res://Assets/Smoke/::1713237063
+::res://Assets/Smoke/FX001/::1713555062
+FX001_01.png::CompressedTexture2D::1217695553966589203::1713237063::1713555062::1::::<><>::
+FX001_02.png::CompressedTexture2D::1937609193914847911::1713237063::1713555062::1::::<><>::
+FX001_03.png::CompressedTexture2D::531813197432342675::1713237063::1713555062::1::::<><>::
+FX001_04.png::CompressedTexture2D::7769090497173495962::1713237063::1713555062::1::::<><>::
+FX001_05.png::CompressedTexture2D::7390148782405175555::1713237063::1713555062::1::::<><>::
+::res://Assets/Smoke/FX002/::1713555062
+FX002_01.png::CompressedTexture2D::8986945457791014875::1713237063::1713555062::1::::<><>::
+FX002_02.png::CompressedTexture2D::183188630452383359::1713237063::1713555062::1::::<><>::
+FX002_03.png::CompressedTexture2D::7791085077308071320::1713237063::1713555062::1::::<><>::
+FX002_04.png::CompressedTexture2D::28105761347771205::1713237063::1713555062::1::::<><>::
+FX002_05.png::CompressedTexture2D::5876147600885084907::1713237063::1713555062::1::::<><>::
+FX002_06.png::CompressedTexture2D::6820189076972605597::1713237063::1713555062::1::::<><>::
+FX002_07.png::CompressedTexture2D::2353907431328213808::1713237063::1713555062::1::::<><>::
+FX002_08.png::CompressedTexture2D::6721050075990529325::1713237063::1713555062::1::::<><>::
+::res://Assets/source-sans-pro/::1713555062
+OFL.txt::TextFile::-1::1713375158::0::1::::<><>::
+SourceSansPro-Black.ttf::FontFile::4502664924176220646::1713375158::1713555062::1::::<><>::
+SourceSansPro-BlackItalic.ttf::FontFile::9101811234194079364::1713375158::1713555062::1::::<><>::
+SourceSansPro-Bold.ttf::FontFile::5031314665845582978::1713375158::1713555062::1::::<><>::
+SourceSansPro-BoldItalic.ttf::FontFile::4096929520100228206::1713375158::1713555062::1::::<><>::
+SourceSansPro-ExtraLight.ttf::FontFile::5979400842273939917::1713375158::1713555062::1::::<><>::
+SourceSansPro-ExtraLightItalic.ttf::FontFile::6668532361646144419::1713375158::1713555062::1::::<><>::
+SourceSansPro-Italic.ttf::FontFile::7379500437347109047::1713375158::1713555062::1::::<><>::
+SourceSansPro-Light.ttf::FontFile::4909078466615494549::1713375158::1713555062::1::::<><>::
+SourceSansPro-LightItalic.ttf::FontFile::3518926971912751942::1713375158::1713555062::1::::<><>::
+SourceSansPro-Regular.ttf::FontFile::8558457327815000228::1713375158::1713555062::1::::<><>::
+SourceSansPro-Semibold.ttf::FontFile::5973044045836859734::1713375158::1713555062::1::::<><>::
+SourceSansPro-SemiboldItalic.ttf::FontFile::6639188890682509274::1713375158::1713555062::1::::<><>::
+::res://Assets/UI assets pack 2/::1713545253
+::res://Assets/UI assets pack 2/UI assets pack 2/::1713555062
+Time & weather.png::CompressedTexture2D::5329380110033936213::1713545253::1713555062::1::::<><>::
+UI books & more.png::CompressedTexture2D::5032607193319903335::1713545253::1713555062::1::::<><>::
+UI cooking.png::CompressedTexture2D::5438944538578227647::1713545253::1713555062::1::::<><>::
+::res://BattleRoyale/::1714402800
+README.md::TextFile::-1::1714402607::0::1::::<><>::
+::res://Effects/::1713922207
+smoke_poof.tscn::PackedScene::3174441366230010434::1713922207::0::1::::<><>::res://Assets/invertUnder.gdshader<>uid://rl4jdwhmesal::::res://Assets/Smoke/FX001/FX001_01.png<>uid://2uue1h0omyx0::::res://Assets/Smoke/FX001/FX001_02.png<>uid://htu5d3dehc24::::res://Assets/Smoke/FX001/FX001_03.png<>uid://dixn1x6023i1w::::res://Assets/Smoke/FX001/FX001_04.png<>uid://ddj3w2mpjff36::::res://Assets/Smoke/FX001/FX001_05.png<>res://Screens/PlayArea/smoke_poof.gd
+::res://PlayerStuff/::1714402806
+Player.gd::GDScript::-1::1714159174::0::1::::<>Node<>::
+Player.tscn::PackedScene::7374548852996127094::1714402806::0::1::::<><>::res://PlayerStuff/Player.gd
+Roster.gd::GDScript::-1::1714160351::0::1::::<>Node<>::
+Roster.tscn::PackedScene::5485807628975886488::1714402806::0::1::::<><>::res://PlayerStuff/Roster.gd
+::res://RosterPresets/::1714159343
+::res://Screens/::1714160340
+::res://Screens/PlayArea/::1714402806
+forbSym.tscn::PackedScene::1615215143971593925::1713906559::0::1::::<><>::uid://dtoaw52pq0rn1::::res://Assets/skull.png<>res://Assets/forbSym.gd
+Grid.gd::GDScript::-1::1713987988::0::1::::<>Node<>::
+MouseTracker.gd::GDScript::-1::1713555396::0::1::::<>Area2D<>::
+PlayArea.tscn::PackedScene::6636127509572589798::1714402806::0::1::::<><>::res://Screens/PlayArea/MouseTracker.gd<>uid://clmp6yk6o6b5p::::res://Assets/pdf2png/bk_sans_006105/Map.png<>res://Screens/PlayArea/Grid.gd<>uid://canr5o0nrkhuk::::res://Screens/PlayArea/PlayerCard.tscn<>uid://c6xa88r7ogpsk::::res://Assets/gear.png<>res://Screens/PlayArea/PlayAreaSettingsButton.gd
+PlayAreaSettingsButton.gd::GDScript::-1::1714071770::0::1::::<>Button<>::
+PlayerCard.gd::GDScript::-1::1714252341::0::1::::<>Panel<>::
+PlayerCard.tscn::PackedScene::4800764815443948430::1714402806::0::1::::<><>::uid://dp8kptpywc167::::res://Assets/Pixel UI pack 3/06.png<>res://Screens/PlayArea/PlayerCard.gd<>uid://dl15puekqcitx::::res://Assets/gun.png<>uid://d32eqbdnedwr5::::res://Assets/sword.png
+smoke_poof.gd::GDScript::-1::1713403571::0::1::::<>AnimatedSprite2D<>::
+::res://Screens/RosterSelect/::1714402807
+RosterSelect.tscn::PackedScene::3176766481371067177::1714402807::0::1::::<><>::uid://cddfbubab83i6::::res://Assets/PanelStyleBox.tres<>uid://canr5o0nrkhuk::::res://Screens/PlayArea/PlayerCard.tscn
+::res://Screens/RosterView/::1714402806
+RosterView.tscn::PackedScene::20668520122152061::1714402806::0::1::::<><>::uid://cddfbubab83i6::::res://Assets/PanelStyleBox.tres<>uid://canr5o0nrkhuk::::res://Screens/PlayArea/PlayerCard.tscn
+::res://Screens/Settings/::1714402806
+ExitSettingsButton.gd::GDScript::-1::1714072507::0::1::::<>Button<>::
+MMButton.gd::GDScript::-1::1714072952::0::1::::<>Button<>::
+Settings.tscn::PackedScene::4968372650276123071::1714402806::0::1::::<><>::uid://cddfbubab83i6::::res://Assets/PanelStyleBox.tres<>res://Screens/Settings/MMButton.gd<>uid://cusx108x05wis::::res://Assets/x.png<>res://Screens/Settings/ExitSettingsButton.gd
+::res://Screens/Title/::1714402806
+beginButton.gd::GDScript::-1::1714252517::0::1::::<>Button<>::
+logo.tscn::PackedScene::5214305964578916639::1713906559::0::1::::<><>::uid://wbo0pso7wdhc::::res://Assets/brLogo.png
+LogoContainer.gd::GDScript::-1::1713922110::0::1::::<>SubViewportContainer<>::
+NoiseAnimator.gd::GDScript::-1::1713628767::0::1::::<>TextureRect<>::
+Quit.gd::GDScript::-1::1713922057::0::1::::<>Button<>::
+settingButton.gd::GDScript::-1::1714071486::0::1::::<>Button<>::
+Title.tscn::PackedScene::950060139784241699::1714402806::0::1::::<><>::res://Assets/Shaders/dissolve.gdshader<>res://Screens/Title/LogoContainer.gd<>uid://wbo0pso7wdhc::::res://Assets/brLogo.png<>uid://qtft75odk5ns::::res://Assets/battle-royale-font/BATTLE ROYALE FONT.otf<>uid://cdxhauglmwuvy::::res://Assets/source-sans-pro/SourceSansPro-Bold.ttf<>res://Screens/Title/beginButton.gd<>res://Screens/Title/settingButton.gd<>res://Screens/Title/Quit.gd

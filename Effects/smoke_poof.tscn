@@ -1,0 +1,46 @@
+[gd_scene load_steps=10 format=3 uid="uid://blhyt535itp6q"]
+
+[ext_resource type="Shader" path="res://Assets/invertUnder.gdshader" id="1_7dwg1"]
+[ext_resource type="Texture2D" uid="uid://rl4jdwhmesal" path="res://Assets/Smoke/FX001/FX001_01.png" id="2_gsix4"]
+[ext_resource type="Texture2D" uid="uid://2uue1h0omyx0" path="res://Assets/Smoke/FX001/FX001_02.png" id="3_76st7"]
+[ext_resource type="Texture2D" uid="uid://htu5d3dehc24" path="res://Assets/Smoke/FX001/FX001_03.png" id="4_cdtfy"]
+[ext_resource type="Texture2D" uid="uid://dixn1x6023i1w" path="res://Assets/Smoke/FX001/FX001_04.png" id="5_wisl6"]
+[ext_resource type="Texture2D" uid="uid://ddj3w2mpjff36" path="res://Assets/Smoke/FX001/FX001_05.png" id="6_stdhi"]
+[ext_resource type="Script" path="res://Screens/PlayArea/smoke_poof.gd" id="7_1t1i7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1pjsx"]
+shader = ExtResource("1_7dwg1")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_acuj0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gsix4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_76st7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cdtfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wisl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_stdhi")
+}],
+"loop": false,
+"name": &"poof",
+"speed": 10.0
+}]
+
+[node name="SmokePoof" type="AnimatedSprite2D"]
+z_index = 1
+texture_filter = 1
+material = SubResource("ShaderMaterial_1pjsx")
+sprite_frames = SubResource("SpriteFrames_acuj0")
+animation = &"poof"
+autoplay = "poof"
+frame = 4
+frame_progress = 1.0
+script = ExtResource("7_1t1i7")
