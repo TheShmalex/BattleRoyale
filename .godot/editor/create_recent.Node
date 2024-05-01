@@ -1,12 +1,12 @@
+Label
+VBoxContainer
 AnimationTree
 RichTextLabel
-Label
 Panel
 Node
 Button
 MarginContainer
 Control
-VBoxContainer
 ScrollContainer
 ColorRect
 AnimationPlayer

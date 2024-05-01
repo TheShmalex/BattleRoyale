@@ -1,4 +1,4 @@
-res://Screens/RosterSelect/RosterSelect.tscn
 res://Assets/invertUnder.gdshader
 res://Assets/Shaders/dissolve.gdshader
 res://Assets/glow.gdshader
+res://PlayerStuff/RosterCard.tscn
