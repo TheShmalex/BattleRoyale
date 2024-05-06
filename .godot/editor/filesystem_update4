@@ -1,4 +1,13 @@
+res://root.tscn
 res://Assets/invertUnder.gdshader
 res://Assets/Shaders/dissolve.gdshader
 res://Assets/glow.gdshader
+res://Screens/PlayArea/PlayArea.tscn
+res://Screens/Title/Title.tscn
+res://Screens/Settings/Settings.tscn
+res://Screens/PlayArea/PlayerCard.tscn
+res://Screens/RosterView/RosterView.tscn
+res://PlayerStuff/Roster.tscn
+res://PlayerStuff/Player.tscn
+res://Screens/RosterSelect/RosterSelect.tscn
 res://PlayerStuff/RosterCard.tscn

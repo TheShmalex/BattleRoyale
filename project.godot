@@ -13,7 +13,9 @@ config_version=5
 config/name="BattleRoyale"
 run/main_scene="res://root.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/image="res://download (3).png"
+config/icon="res://download (1).png"
+boot_splash/minimum_display_time=2000
 
 [display]
 
