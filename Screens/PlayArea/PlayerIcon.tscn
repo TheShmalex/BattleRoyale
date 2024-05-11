@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0hmwyc41teyw"]
+
+[ext_resource type="Texture2D" uid="uid://bd7horcsacr0v" path="res://Assets/circle.png" id="1_lh8j6"]
+
+[node name="PlayerIcon" type="Node2D"]
+scale = Vector2(0.01, 0.01)
+
+[node name="Circle" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("1_lh8j6")
+
+[node name="Circle2" type="Sprite2D" parent="."]
+texture = ExtResource("1_lh8j6")

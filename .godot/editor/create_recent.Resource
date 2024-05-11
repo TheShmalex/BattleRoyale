@@ -1,1 +1,3 @@
+RosterResource
+PlayerResource
 Resource

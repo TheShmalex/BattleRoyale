@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="PlayerResource" load_steps=2 format=3 uid="uid://g5l2g1q6g64a"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Player.gd" id="1_rcl1k"]
+
+[resource]
+script = ExtResource("1_rcl1k")
+fName = "Laurel"
+lName = "Sewell"

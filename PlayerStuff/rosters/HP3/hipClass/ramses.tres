@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="PlayerResource" load_steps=2 format=3 uid="uid://sq0mnncnbt5i"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Player.gd" id="1_0w8uv"]
+
+[resource]
+script = ExtResource("1_0w8uv")
+fName = "Ramses"
+lName = "Levi"

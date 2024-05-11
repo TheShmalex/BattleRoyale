@@ -1,8 +1,7 @@
-extends Node
+extends Resource
+class_name PlayerResource
 
-var fname
-var lname
-var melee
-var ranged
-var weapon
-var nature
+@export var fName : String
+@export var lName : String
+@export var color : Color
+

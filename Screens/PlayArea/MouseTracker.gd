@@ -1,6 +1,7 @@
 extends Area2D
-
+var mouseStart
 var areaMouseIn
+var mouseNewPos
 var smokePoof = preload("res://Effects/smoke_poof.tscn")
 signal clickedArea
 
@@ -11,11 +12,6 @@ func _process(delta):
 		add_child(sp)
 	if get_overlapping_areas().size()>0:
 		areaMouseIn = get_overlapping_areas()[0]
-
-func _input(event):
-	if event.is_action_pressed("Click"):
-		emit_signal("clickedArea", areaMouseIn)
-
 
 
 

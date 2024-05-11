@@ -307,7 +307,6 @@ libraries = {
 "": SubResource("AnimationLibrary_tpico")
 }
 autoplay = "enter"
-speed_scale = 6.895
 
 [connection signal="pressed" from="Begin" to="Begin" method="_on_pressed"]
 [connection signal="pressed" from="Settings" to="Settings" method="_on_pressed"]

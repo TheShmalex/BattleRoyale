@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://doxrykkv4bs0n"]
+
+[ext_resource type="Script" path="res://PlayerStuff/rosterCard/RosterCard.gd" id="1_1scbm"]
+[ext_resource type="Script" path="res://PlayerStuff/rosterCard/Label.gd" id="2_v37q5"]
+[ext_resource type="Script" path="res://PlayerStuff/rosterCard/Button.gd" id="3_6jvs8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmwkb"]
+bg_color = Color(0.145098, 0.145098, 0.145098, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_5eifr"]
+Panel/styles/panel = SubResource("StyleBoxFlat_dmwkb")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fs2x3"]
+
+[node name="RosterCard" type="Control"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 3
+anchor_right = 0.173611
+anchor_bottom = 0.115741
+offset_right = -200.0
+offset_bottom = -75.0
+script = ExtResource("1_1scbm")
+metadata/_edit_use_anchors_ = true
+
+[node name="card" type="Panel" parent="."]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.173611
+anchor_bottom = 0.115741
+theme = SubResource("Theme_5eifr")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="card"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="card/VBoxContainer"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 18
+text = "Roster Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_v37q5")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fs2x3")
+script = ExtResource("3_6jvs8")

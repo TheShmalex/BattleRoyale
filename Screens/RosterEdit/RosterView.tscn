@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://kan4cv430rh"]
+[gd_scene load_steps=4 format=3 uid="uid://kan4cv430rh"]
 
+[ext_resource type="Script" path="res://Screens/RosterEdit/RosterView.gd" id="1_1i21t"]
 [ext_resource type="StyleBox" uid="uid://cddfbubab83i6" path="res://Assets/PanelStyleBox.tres" id="1_4yqbe"]
-[ext_resource type="PackedScene" uid="uid://canr5o0nrkhuk" path="res://Screens/PlayArea/PlayerCard.tscn" id="2_hfks4"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r1lxy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6in3t"]
 bg_color = Color(0.145098, 0.145098, 0.145098, 1)
@@ -12,13 +10,14 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="Roster" type="Control"]
+[node name="RosterView" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1i21t")
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(800, 500)
@@ -43,7 +42,7 @@ anchors_preset = -1
 anchor_left = 0.70875
 anchor_top = 0.024
 anchor_right = 0.98125
-anchor_bottom = 0.972
+anchor_bottom = 0.82
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
@@ -59,38 +58,10 @@ theme_override_constants/margin_left = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="Panel/ScrollContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_r1lxy")
-
-[node name="card" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_hfks4")]
-layout_mode = 2
-
-[node name="card2" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_hfks4")]
-layout_mode = 2
-
-[node name="card3" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_hfks4")]
-layout_mode = 2
-
-[node name="card4" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_hfks4")]
-layout_mode = 2
-
-[node name="card5" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_hfks4")]
-layout_mode = 2
-
-[node name="card6" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_hfks4")]
-layout_mode = 2
-
-[node name="card7" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_hfks4")]
-layout_mode = 2
-
-[node name="card8" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_hfks4")]
-layout_mode = 2
-
-[node name="card9" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_hfks4")]
-layout_mode = 2
-
-[node name="card10" parent="Panel/ScrollContainer/VBoxContainer" instance=ExtResource("2_hfks4")]
-layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "+"
 
 [node name="Panel" type="Panel" parent="Panel"]
 custom_minimum_size = Vector2(550, 475)

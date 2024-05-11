@@ -1,7 +1,9 @@
-extends Node
-var players
-var numOfPlayers
+extends Resource
+class_name RosterResource
 
-func _process(delta):
-	players = get_children()
-	numOfPlayers = get_child_count()
+@export var rosterName : String
+@export var players := [PlayerResource]
+var size := players.size()
+
+func addPlayer(p : PlayerResource):
+	players.append(p)

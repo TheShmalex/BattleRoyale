@@ -1,9 +1,12 @@
-[gd_scene load_steps=20 format=3 uid="uid://canr5o0nrkhuk"]
+[gd_scene load_steps=23 format=3 uid="uid://canr5o0nrkhuk"]
 
 [ext_resource type="Texture2D" uid="uid://dp8kptpywc167" path="res://Assets/Pixel UI pack 3/06.png" id="1_2o6e4"]
-[ext_resource type="Script" path="res://Screens/PlayArea/PlayerCard.gd" id="1_yxlvh"]
+[ext_resource type="Script" path="res://PlayerStuff/playerCard/PlayerCard.gd" id="1_yxlvh"]
 [ext_resource type="Texture2D" uid="uid://dl15puekqcitx" path="res://Assets/gun.png" id="2_8q53u"]
+[ext_resource type="Resource" uid="uid://dif8y6dmjx223" path="res://PlayerStuff/rosters/HP3/hipClass/alex.tres" id="2_bfsn3"]
 [ext_resource type="Texture2D" uid="uid://d32eqbdnedwr5" path="res://Assets/sword.png" id="3_dtv7u"]
+[ext_resource type="Script" path="res://PlayerStuff/playerCard/lNameLabel.gd" id="6_7fntf"]
+[ext_resource type="Script" path="res://PlayerStuff/playerCard/fNameLabel.gd" id="7_8qs0m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmwkb"]
 bg_color = Color(0.145098, 0.145098, 0.145098, 1)
@@ -102,6 +105,8 @@ custom_minimum_size = Vector2(200, 75)
 layout_mode = 3
 anchor_right = 0.173611
 anchor_bottom = 0.115741
+script = ExtResource("1_yxlvh")
+player = ExtResource("2_bfsn3")
 metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -117,7 +122,6 @@ metadata/_edit_use_anchors_ = true
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
 theme = SubResource("Theme_uja53")
-script = ExtResource("1_yxlvh")
 metadata/_edit_use_anchors_ = true
 
 [node name="MeleeBar" type="AnimatedSprite2D" parent="MarginContainer/card"]
@@ -185,9 +189,10 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_mkrov")
 texture_filter = 1
 layout_mode = 2
 text = "Lname"
+script = ExtResource("6_7fntf")
 metadata/_edit_use_anchors_ = true
 
-[node name="lName2" type="Label" parent="MarginContainer/card/NameContainer"]
+[node name="," type="Label" parent="MarginContainer/card/NameContainer"]
 texture_filter = 1
 layout_mode = 2
 text = ","
@@ -197,6 +202,7 @@ metadata/_edit_use_anchors_ = true
 texture_filter = 1
 layout_mode = 2
 text = "Fname"
+script = ExtResource("7_8qs0m")
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="MarginContainer"]
