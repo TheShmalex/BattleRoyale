@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://c5fh6cyn4ldcl"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_8e0ib"]
+
+[resource]
+script = ExtResource("1_8e0ib")
+wName = "Slingshot"
+meleeLvl = 0
+rangedLvl = 2
+killMessages = ["", "", ""]

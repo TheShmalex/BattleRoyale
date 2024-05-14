@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://dw0lgej4p1e87"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_4srs0"]
+
+[resource]
+script = ExtResource("1_4srs0")
+wName = "Spear"
+meleeLvl = 0
+rangedLvl = 0
+killMessages = ["", "", ""]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://cia36dsbrk60y"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_id0j6"]
+
+[resource]
+script = ExtResource("1_id0j6")
+wName = "Fork"
+meleeLvl = 1
+rangedLvl = 0
+killMessages = ["1 punctured 2's throat with a fork", "1 stabs 2 repeatadly while they're sleeping", "1 forcefeeds 2 poisen ivy until they asphyxiate"]

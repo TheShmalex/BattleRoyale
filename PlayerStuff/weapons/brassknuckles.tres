@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://cvp14wqtmdprf"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_8x18f"]
+
+[resource]
+script = ExtResource("1_8x18f")
+wName = "Brass Knuckles"
+meleeLvl = 2
+rangedLvl = 0
+killMessages = ["", "", ""]

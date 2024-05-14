@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://dn0e6887vmv2b"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_lq6rt"]
+
+[resource]
+script = ExtResource("1_lq6rt")
+wName = "Kevlar Vest"
+meleeLvl = 3
+rangedLvl = 0
+killMessages = ["", "", ""]

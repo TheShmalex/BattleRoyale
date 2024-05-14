@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://s3h81tvug80b"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_5616f"]
+
+[resource]
+script = ExtResource("1_5616f")
+wName = "Icepick"
+meleeLvl = 3
+rangedLvl = 0
+killMessages = ["", "", ""]

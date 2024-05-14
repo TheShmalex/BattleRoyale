@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://ccamoi5h1ef10"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_t6nrb"]
+
+[resource]
+script = ExtResource("1_t6nrb")
+wName = "Banjo"
+meleeLvl = 1
+rangedLvl = 0
+killMessages = ["", "", ""]

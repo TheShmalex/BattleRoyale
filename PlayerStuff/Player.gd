@@ -7,6 +7,6 @@ class_name PlayerResource
 @export var meleeLvl : int
 @export var rangedLvl : int
 var index : int
+var card
 
-var alive := true
 @export var weapon : WeaponResource

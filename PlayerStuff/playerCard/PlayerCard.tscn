@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://canr5o0nrkhuk"]
+[gd_scene load_steps=32 format=3 uid="uid://canr5o0nrkhuk"]
 
 [ext_resource type="Texture2D" uid="uid://dp8kptpywc167" path="res://Assets/Pixel UI pack 3/06.png" id="1_2o6e4"]
 [ext_resource type="Script" path="res://PlayerStuff/playerCard/PlayerCard.gd" id="1_yxlvh"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://d32eqbdnedwr5" path="res://Assets/sword.png" id="3_dtv7u"]
 [ext_resource type="Script" path="res://PlayerStuff/playerCard/lNameLabel.gd" id="6_7fntf"]
 [ext_resource type="Script" path="res://PlayerStuff/playerCard/fNameLabel.gd" id="7_8qs0m"]
+[ext_resource type="Script" path="res://PlayerStuff/playerCard/Label2.gd" id="8_ybw5u"]
+[ext_resource type="Script" path="res://PlayerStuff/playerCard/Button.gd" id="9_k7pyt"]
 
 [sub_resource type="Shader" id="Shader_42k3b"]
 code = "shader_type canvas_item;
@@ -172,27 +174,13 @@ tracks/0/keys = {
 "method": &"queue_free"
 }]
 }
-tracks/1/type = "method"
+tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".")
+tracks/1/path = NodePath("SubViewportContainer:material:shader_parameter/dissolve_value")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"announceDisentigration"
-}]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("SubViewportContainer:material:shader_parameter/dissolve_value")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
@@ -206,10 +194,10 @@ _data = {
 }
 
 [node name="PlayerCard" type="Control"]
-custom_minimum_size = Vector2(200, 75)
+custom_minimum_size = Vector2(400, 150)
 layout_mode = 3
-anchor_right = 0.173611
-anchor_bottom = 0.115741
+anchor_right = 0.208333
+anchor_bottom = 0.138889
 script = ExtResource("1_yxlvh")
 player = ExtResource("2_ijaxj")
 metadata/_edit_use_anchors_ = true
@@ -217,70 +205,51 @@ metadata/_edit_use_anchors_ = true
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 texture_filter = 1
 material = SubResource("ShaderMaterial_6xvv7")
-layout_mode = 0
+custom_minimum_size = Vector2(400, 150)
+layout_mode = 1
+anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 0.999998
-offset_right = -160.0
-offset_bottom = -35.0
+anchor_bottom = 1.0
+offset_right = -126.027
+offset_bottom = -48.6487
 metadata/_edit_use_anchors_ = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(200, 75)
+size = Vector2i(400, 150)
 render_target_update_mode = 4
 
 [node name="card" type="Panel" parent="SubViewportContainer/SubViewport"]
 show_behind_parent = true
 texture_filter = 1
-custom_minimum_size = Vector2(200, 75)
+custom_minimum_size = Vector2(400, 150)
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.999998
-offset_bottom = 0.000167847
+offset_bottom = 0.000305176
 theme_override_styles/panel = SubResource("StyleBoxFlat_lqw8i")
 metadata/_edit_use_anchors_ = true
 
 [node name="MeleeBar" type="AnimatedSprite2D" parent="SubViewportContainer/SubViewport/card"]
 texture_filter = 1
-position = Vector2(169, 42)
-scale = Vector2(1.2, 1.57452)
+position = Vector2(320, 91.096)
+scale = Vector2(2.67664, 3.51202)
 sprite_frames = SubResource("SpriteFrames_grcn1")
 
 [node name="ShootingBar" type="AnimatedSprite2D" parent="SubViewportContainer/SubViewport/card"]
 texture_filter = 1
-position = Vector2(169, 63)
-scale = Vector2(1.2, 1.57452)
+position = Vector2(320, 124.295)
+scale = Vector2(2.67664, 3.51202)
 sprite_frames = SubResource("SpriteFrames_ke6gn")
 
-[node name="location" type="Label" parent="SubViewportContainer/SubViewport/card"]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.045
-anchor_top = 0.4
-anchor_right = 0.31
-anchor_bottom = 0.706667
-text = "Loc"
-
-[node name="nature" type="Label" parent="SubViewportContainer/SubViewport/card"]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.045
-anchor_top = 0.666667
-anchor_right = 0.31
-anchor_bottom = 0.973333
-text = "Nat
-"
-
 [node name="Gun" type="Sprite2D" parent="SubViewportContainer/SubViewport/card"]
-position = Vector2(133.25, 64.5)
-scale = Vector2(3.5, 3.5)
+position = Vector2(243.812, 127.125)
+scale = Vector2(8.125, 8.125)
 texture = ExtResource("2_8q53u")
 
 [node name="Sword" type="Sprite2D" parent="SubViewportContainer/SubViewport/card"]
-position = Vector2(133, 42)
-scale = Vector2(3.08333, 3.08333)
+position = Vector2(243, 91)
+scale = Vector2(6.20832, 6.20832)
 texture = ExtResource("3_dtv7u")
 region_enabled = true
 region_rect = Rect2(0, 1, 3, 4)
@@ -290,6 +259,8 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.595
 anchor_bottom = 0.426666
+offset_top = -9.0
+offset_bottom = -9.0
 
 [node name="PanelContainer" type="PanelContainer" parent="SubViewportContainer/SubViewport/card/NameContainer"]
 custom_minimum_size = Vector2(5, 0)
@@ -299,6 +270,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_mkrov")
 [node name="lName" type="Label" parent="SubViewportContainer/SubViewport/card/NameContainer"]
 texture_filter = 1
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Lname"
 script = ExtResource("6_7fntf")
 metadata/_edit_use_anchors_ = true
@@ -306,27 +278,52 @@ metadata/_edit_use_anchors_ = true
 [node name="," type="Label" parent="SubViewportContainer/SubViewport/card/NameContainer"]
 texture_filter = 1
 layout_mode = 2
+theme_override_font_sizes/font_size = 25
 text = ","
 metadata/_edit_use_anchors_ = true
 
 [node name="fName" type="Label" parent="SubViewportContainer/SubViewport/card/NameContainer"]
 texture_filter = 1
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Fname"
 script = ExtResource("7_8qs0m")
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 2
-anchor_right = 1.0
-anchor_bottom = 0.999998
-theme_override_styles/normal = SubResource("StyleBoxEmpty_nq755")
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/card"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.714875
+anchor_top = 0.186667
+anchor_right = 0.897375
+anchor_bottom = 0.34
+offset_left = 22.05
+offset_right = 22.05
+grow_horizontal = 0
+text = "Weapon:"
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Button"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/card/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.904794
+anchor_top = 1.0
+anchor_right = 0.930822
+anchor_bottom = 2.0
+grow_horizontal = 0
+horizontal_alignment = 2
+script = ExtResource("8_ybw5u")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nq755")
+script = ExtResource("9_k7pyt")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

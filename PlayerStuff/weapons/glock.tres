@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://dm1sghjaeqobv"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_7rpwp"]
+
+[resource]
+script = ExtResource("1_7rpwp")
+wName = "Glock"
+meleeLvl = 0
+rangedLvl = 3
+killMessages = ["", "", ""]

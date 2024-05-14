@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://b12qq1jhqg2a1"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_fgkx6"]
+
+[resource]
+script = ExtResource("1_fgkx6")
+wName = "Sawed-Off"
+meleeLvl = 1
+rangedLvl = 4
+killMessages = ["", "", ""]

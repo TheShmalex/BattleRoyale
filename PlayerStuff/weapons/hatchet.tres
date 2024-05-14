@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://dgccoktxhyw6r"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_k57j7"]
+
+[resource]
+script = ExtResource("1_k57j7")
+wName = "Hatchet"
+meleeLvl = 4
+rangedLvl = 1
+killMessages = ["2's head was split open with a peanut by 1's hatchet", "2 tries to run away but is swiftly struck down by 1's hatchet", "1 launches a hatchet into 2's back"]

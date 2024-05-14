@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://dooixd1smsxiv"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_7u12i"]
+
+[resource]
+script = ExtResource("1_7u12i")
+wName = "Bow & Arrows"
+meleeLvl = 0
+rangedLvl = 2
+killMessages = ["", "", ""]

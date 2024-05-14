@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://c1subyoeemka5"]
+[gd_scene load_steps=41 format=3 uid="uid://c1subyoeemka5"]
 
 [ext_resource type="Script" path="res://Screens/PlayArea/MouseTracker.gd" id="1_a8bkx"]
 [ext_resource type="Script" path="res://Screens/PlayArea/Glogic.gd" id="1_clthu"]
@@ -10,75 +10,36 @@
 [ext_resource type="Texture2D" uid="uid://c6xa88r7ogpsk" path="res://Assets/gear.png" id="5_a6bah"]
 [ext_resource type="Resource" uid="uid://j6pn2qrmsg7a" path="res://PlayerStuff/weapons/grenades.tres" id="6_5v8la"]
 [ext_resource type="Script" path="res://Screens/PlayArea/PlayAreaSettingsButton.gd" id="6_65q8j"]
-[ext_resource type="PackedScene" uid="uid://c0hmwyc41teyw" path="res://Screens/PlayArea/PlayerIcon.tscn" id="7_ldosm"]
 [ext_resource type="Resource" uid="uid://b4xobpdfxu0kg" path="res://PlayerStuff/weapons/huntingknife.tres" id="7_pxpkk"]
 [ext_resource type="Resource" uid="uid://dmdoqm8a2gb4s" path="res://PlayerStuff/weapons/throwingstars.tres" id="8_2jvue"]
 [ext_resource type="Script" path="res://Screens/PlayArea/Log.gd" id="8_jb1d5"]
 [ext_resource type="Script" path="res://Screens/PlayArea/SR.gd" id="9_56w3f"]
 [ext_resource type="Resource" uid="uid://8y4k1xa2j76w" path="res://PlayerStuff/weapons/typewritergun.tres" id="9_84d1j"]
+[ext_resource type="Resource" uid="uid://dgccoktxhyw6r" path="res://PlayerStuff/weapons/hatchet.tres" id="10_0slvi"]
+[ext_resource type="Resource" uid="uid://cia36dsbrk60y" path="res://PlayerStuff/weapons/fork.tres" id="11_xqr7u"]
+[ext_resource type="Resource" uid="uid://ck53bgdt5oc2x" path="res://PlayerStuff/weapons/crossbow.tres" id="12_snya5"]
+[ext_resource type="Resource" uid="uid://s3h81tvug80b" path="res://PlayerStuff/weapons/icepick.tres" id="13_w8uqc"]
+[ext_resource type="Resource" uid="uid://bkfr2qecybqtl" path="res://PlayerStuff/weapons/sledgehammer.tres" id="14_bs0bv"]
+[ext_resource type="Resource" uid="uid://ccamoi5h1ef10" path="res://PlayerStuff/weapons/banjo.tres" id="15_t7p0w"]
+[ext_resource type="Resource" uid="uid://b58p0d0hrpwrm" path="res://PlayerStuff/weapons/sword.tres" id="16_vscao"]
+[ext_resource type="Resource" uid="uid://cvp14wqtmdprf" path="res://PlayerStuff/weapons/brassknuckles.tres" id="17_rpkrr"]
+[ext_resource type="Resource" uid="uid://dooixd1smsxiv" path="res://PlayerStuff/weapons/bow.tres" id="18_mgu6x"]
+[ext_resource type="Resource" uid="uid://b37s6nmwua650" path="res://PlayerStuff/weapons/baseballbat.tres" id="19_upeqn"]
+[ext_resource type="Resource" uid="uid://bquwyd1fs5rpq" path="res://PlayerStuff/weapons/sickle.tres" id="20_t83dt"]
+[ext_resource type="Resource" uid="uid://dhp814igdu468" path="res://PlayerStuff/weapons/shotgun.tres" id="21_f405u"]
+[ext_resource type="Resource" uid="uid://bbyb2354x7hvs" path="res://PlayerStuff/weapons/pistol.tres" id="22_6mgdw"]
+[ext_resource type="Resource" uid="uid://rdw0n71n5fna" path="res://PlayerStuff/weapons/revolver.tres" id="23_7u1to"]
+[ext_resource type="Resource" uid="uid://bsawbv18tly3n" path="res://PlayerStuff/weapons/boomerang.tres" id="24_ebqpc"]
+[ext_resource type="Resource" uid="uid://b12qq1jhqg2a1" path="res://PlayerStuff/weapons/sawedoff.tres" id="25_bskfv"]
+[ext_resource type="Resource" uid="uid://dm1sghjaeqobv" path="res://PlayerStuff/weapons/glock.tres" id="26_8k55c"]
+[ext_resource type="Resource" uid="uid://c5fh6cyn4ldcl" path="res://PlayerStuff/weapons/slingshot.tres" id="27_u6lwt"]
+[ext_resource type="Resource" uid="uid://dn0e6887vmv2b" path="res://PlayerStuff/weapons/kevlar.tres" id="28_6gln8"]
+[ext_resource type="Resource" uid="uid://dw0lgej4p1e87" path="res://PlayerStuff/weapons/spear.tres" id="29_02d7l"]
+[ext_resource type="Resource" uid="uid://cjym8ggc0gc41" path="res://PlayerStuff/weapons/tennisracquet.tres" id="30_7wmnd"]
+[ext_resource type="Resource" uid="uid://dokhvb5u7qru3" path="res://PlayerStuff/weapons/dagger.tres" id="31_uwwp5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l5vvi"]
 radius = 2.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1h6yd"]
-size = Vector2(54, 55)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_54omb"]
-size = Vector2(52.5, 56)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wsxbt"]
-size = Vector2(55.5, 56)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ccsta"]
-size = Vector2(54, 56)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbpq8"]
-size = Vector2(54, 56)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_la17r"]
-size = Vector2(52, 56)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbwp0"]
-size = Vector2(54, 56)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3yere"]
-size = Vector2(52, 56)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dxg8o"]
-size = Vector2(54, 56)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_faj5v"]
-size = Vector2(52, 56)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2afmx"]
-size = Vector2(54, 53)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_amqgo"]
-size = Vector2(52.5, 53)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rtd6p"]
-size = Vector2(55.5, 53)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8b3ia"]
-size = Vector2(54, 53)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3j5t"]
-size = Vector2(54, 53)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7lr1s"]
-size = Vector2(52, 53)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a6vkg"]
-size = Vector2(54, 53)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cg14c"]
-size = Vector2(52, 53)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ux2en"]
-size = Vector2(54, 53)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yjeh6"]
-size = Vector2(52, 53)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrb36"]
 bg_color = Color(0.113725, 0.105882, 0.109804, 1)
@@ -112,770 +73,33 @@ shape = SubResource("CircleShape2D_l5vvi")
 [node name="Glogic" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_clthu")
-weapons = [ExtResource("5_4vsjs"), ExtResource("6_5v8la"), ExtResource("7_pxpkk"), ExtResource("8_2jvue"), ExtResource("9_84d1j")]
+weapons = [ExtResource("5_4vsjs"), ExtResource("6_5v8la"), ExtResource("7_pxpkk"), ExtResource("8_2jvue"), ExtResource("9_84d1j"), ExtResource("10_0slvi"), ExtResource("11_xqr7u"), ExtResource("12_snya5"), ExtResource("13_w8uqc"), ExtResource("14_bs0bv"), ExtResource("15_t7p0w"), ExtResource("16_vscao"), ExtResource("17_rpkrr"), ExtResource("18_mgu6x"), ExtResource("19_upeqn"), ExtResource("20_t83dt"), ExtResource("21_f405u"), ExtResource("22_6mgdw"), ExtResource("23_7u1to"), ExtResource("24_ebqpc"), ExtResource("25_bskfv"), ExtResource("26_8k55c"), ExtResource("27_u6lwt"), ExtResource("28_6gln8"), ExtResource("29_02d7l"), ExtResource("30_7wmnd"), ExtResource("31_uwwp5")]
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-texture_filter = 1
+[node name="mapGrid" type="Control" parent="."]
+visible = false
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.557292
-anchor_bottom = 1.0
-metadata/_edit_use_anchors_ = true
-
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
-handle_input_locally = false
-size = Vector2i(642, 648)
-render_target_update_mode = 4
-
-[node name="mapGrid" type="Control" parent="SubViewportContainer/SubViewport"]
-layout_mode = 3
 anchor_right = 0.557
 anchor_bottom = 1.0
 offset_right = -285.184
 offset_bottom = -512.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Grid" type="Node" parent="SubViewportContainer/SubViewport/mapGrid"]
+[node name="Grid" type="Node" parent="mapGrid"]
 script = ExtResource("3_cmsep")
 
-[node name="MapSprite" type="Sprite2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid"]
+[node name="MapSprite" type="Sprite2D" parent="mapGrid/Grid"]
 texture_filter = 1
-position = Vector2(321, 324)
-scale = Vector2(0.554883, 0.55527)
+position = Vector2(553, 542)
+scale = Vector2(0.923077, 0.898029)
 texture = ExtResource("2_vjde7")
 region_enabled = true
 region_rect = Rect2(277, 213, 1157, 1167)
 
-[node name="A" type="Node" parent="SubViewportContainer/SubViewport/mapGrid/Grid"]
-
-[node name="A1" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A"]
-position = Vector2(54, 54)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A/A1"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_1h6yd")
-
-[node name="A2" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A"]
-position = Vector2(108, 54)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A/A2"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_54omb")
-
-[node name="A3" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A"]
-position = Vector2(162, 54)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A/A3"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_wsxbt")
-
-[node name="A4" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A"]
-position = Vector2(214, 54)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A/A4"]
-position = Vector2(29, 27)
-shape = SubResource("RectangleShape2D_ccsta")
-
-[node name="A5" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A"]
-position = Vector2(270, 54)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A/A5"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_pbpq8")
-
-[node name="A6" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A"]
-position = Vector2(329, 54)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A/A6"]
-position = Vector2(21, 27)
-shape = SubResource("RectangleShape2D_la17r")
-
-[node name="A7" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A"]
-position = Vector2(379, 54)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A/A7"]
-position = Vector2(23.5, 27)
-shape = SubResource("RectangleShape2D_hbwp0")
-
-[node name="A8" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A"]
-position = Vector2(431, 54)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A/A8"]
-position = Vector2(25, 27)
-shape = SubResource("RectangleShape2D_3yere")
-
-[node name="A9" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A"]
-position = Vector2(482, 54)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A/A9"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_dxg8o")
-
-[node name="A10" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A"]
-position = Vector2(536, 54)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/A/A10"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_faj5v")
-
-[node name="B" type="Node" parent="SubViewportContainer/SubViewport/mapGrid/Grid"]
-
-[node name="B1" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B"]
-position = Vector2(54, 108)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B/B1"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_1h6yd")
-
-[node name="B2" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B"]
-position = Vector2(107, 108)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B/B2"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_54omb")
-
-[node name="B3" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B"]
-position = Vector2(161, 108)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B/B3"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_wsxbt")
-
-[node name="B4" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B"]
-position = Vector2(213, 108)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B/B4"]
-position = Vector2(29, 27)
-shape = SubResource("RectangleShape2D_ccsta")
-
-[node name="B5" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B"]
-position = Vector2(269, 108)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B/B5"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_pbpq8")
-
-[node name="B6" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B"]
-position = Vector2(328, 108)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B/B6"]
-position = Vector2(21, 27)
-shape = SubResource("RectangleShape2D_la17r")
-
-[node name="B7" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B"]
-position = Vector2(378, 108)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B/B7"]
-position = Vector2(23.5, 27)
-shape = SubResource("RectangleShape2D_hbwp0")
-
-[node name="B8" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B"]
-position = Vector2(430, 108)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B/B8"]
-position = Vector2(24.5, 27)
-shape = SubResource("RectangleShape2D_3yere")
-
-[node name="B9" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B"]
-position = Vector2(481, 108)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B/B9"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_dxg8o")
-
-[node name="B10" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B"]
-position = Vector2(535, 108)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/B/B10"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_faj5v")
-
-[node name="C" type="Node" parent="SubViewportContainer/SubViewport/mapGrid/Grid"]
-
-[node name="C1" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C"]
-position = Vector2(54, 163)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C/C1"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_1h6yd")
-
-[node name="C2" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C"]
-position = Vector2(107, 163)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C/C2"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_54omb")
-
-[node name="C3" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C"]
-position = Vector2(161, 163)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C/C3"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_wsxbt")
-
-[node name="C4" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C"]
-position = Vector2(213, 163)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C/C4"]
-position = Vector2(29, 27)
-shape = SubResource("RectangleShape2D_ccsta")
-
-[node name="C5" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C"]
-position = Vector2(269, 163)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C/C5"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_pbpq8")
-
-[node name="C6" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C"]
-position = Vector2(328, 163)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C/C6"]
-position = Vector2(21, 27)
-shape = SubResource("RectangleShape2D_la17r")
-
-[node name="C7" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C"]
-position = Vector2(378, 163)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C/C7"]
-position = Vector2(23.5, 27)
-shape = SubResource("RectangleShape2D_hbwp0")
-
-[node name="C8" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C"]
-position = Vector2(430, 163)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C/C8"]
-position = Vector2(24.5, 27)
-shape = SubResource("RectangleShape2D_3yere")
-
-[node name="C9" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C"]
-position = Vector2(481, 163)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C/C9"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_dxg8o")
-
-[node name="C10" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C"]
-position = Vector2(535, 163)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/C/C10"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_faj5v")
-
-[node name="D" type="Node" parent="SubViewportContainer/SubViewport/mapGrid/Grid"]
-
-[node name="D1" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D"]
-position = Vector2(54, 217)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D/D1"]
-position = Vector2(27, 28)
-shape = SubResource("RectangleShape2D_1h6yd")
-
-[node name="D2" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D"]
-position = Vector2(107, 217)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D/D2"]
-position = Vector2(26.5, 28)
-shape = SubResource("RectangleShape2D_54omb")
-
-[node name="D3" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D"]
-position = Vector2(161, 217)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D/D3"]
-position = Vector2(26.25, 28)
-shape = SubResource("RectangleShape2D_wsxbt")
-
-[node name="D4" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D"]
-position = Vector2(213, 217)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D/D4"]
-position = Vector2(29, 28)
-shape = SubResource("RectangleShape2D_ccsta")
-
-[node name="D5" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D"]
-position = Vector2(269, 217)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D/D5"]
-position = Vector2(27, 28)
-shape = SubResource("RectangleShape2D_pbpq8")
-
-[node name="D6" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D"]
-position = Vector2(328, 217)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D/D6"]
-position = Vector2(21, 28)
-shape = SubResource("RectangleShape2D_la17r")
-
-[node name="D7" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D"]
-position = Vector2(378, 217)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D/D7"]
-position = Vector2(24, 28)
-shape = SubResource("RectangleShape2D_hbwp0")
-
-[node name="D8" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D"]
-position = Vector2(430, 217)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D/D8"]
-position = Vector2(25, 28)
-shape = SubResource("RectangleShape2D_3yere")
-
-[node name="D9" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D"]
-position = Vector2(481, 217)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D/D9"]
-position = Vector2(27, 28)
-shape = SubResource("RectangleShape2D_dxg8o")
-
-[node name="D10" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D"]
-position = Vector2(535, 217)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/D/D10"]
-position = Vector2(26, 28)
-shape = SubResource("RectangleShape2D_faj5v")
-
-[node name="E" type="Node" parent="SubViewportContainer/SubViewport/mapGrid/Grid"]
-
-[node name="E1" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E"]
-position = Vector2(54, 274)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E/E1"]
-position = Vector2(27, 25.5)
-shape = SubResource("RectangleShape2D_2afmx")
-
-[node name="E2" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E"]
-position = Vector2(107, 274)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E/E2"]
-position = Vector2(26.75, 25.5)
-shape = SubResource("RectangleShape2D_amqgo")
-
-[node name="E3" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E"]
-position = Vector2(161, 274)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E/E3"]
-position = Vector2(26.5, 25.5)
-shape = SubResource("RectangleShape2D_rtd6p")
-
-[node name="E4" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E"]
-position = Vector2(213, 274)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E/E4"]
-position = Vector2(29, 25.5)
-shape = SubResource("RectangleShape2D_8b3ia")
-
-[node name="E5" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E"]
-position = Vector2(269, 274)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E/E5"]
-position = Vector2(27, 25.5)
-shape = SubResource("RectangleShape2D_o3j5t")
-
-[node name="E6" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E"]
-position = Vector2(328, 274)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E/E6"]
-position = Vector2(21, 25.5)
-shape = SubResource("RectangleShape2D_7lr1s")
-
-[node name="E7" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E"]
-position = Vector2(378, 274)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E/E7"]
-position = Vector2(24, 25.5)
-shape = SubResource("RectangleShape2D_a6vkg")
-
-[node name="E8" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E"]
-position = Vector2(430, 274)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E/E8"]
-position = Vector2(25, 25.5)
-shape = SubResource("RectangleShape2D_cg14c")
-
-[node name="E9" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E"]
-position = Vector2(481, 274)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E/E9"]
-position = Vector2(27, 25.5)
-shape = SubResource("RectangleShape2D_ux2en")
-
-[node name="E10" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E"]
-position = Vector2(535, 274)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/E/E10"]
-position = Vector2(26, 25.5)
-shape = SubResource("RectangleShape2D_yjeh6")
-
-[node name="F" type="Node" parent="SubViewportContainer/SubViewport/mapGrid/Grid"]
-
-[node name="F1" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F"]
-position = Vector2(55, 326)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F/F1"]
-position = Vector2(27, 27.5)
-shape = SubResource("RectangleShape2D_1h6yd")
-
-[node name="F2" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F"]
-position = Vector2(108, 326)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F/F2"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_54omb")
-
-[node name="F3" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F"]
-position = Vector2(162, 326)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F/F3"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_wsxbt")
-
-[node name="F4" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F"]
-position = Vector2(214, 326)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F/F4"]
-position = Vector2(29, 27)
-shape = SubResource("RectangleShape2D_ccsta")
-
-[node name="F5" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F"]
-position = Vector2(270, 326)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F/F5"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_pbpq8")
-
-[node name="F6" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F"]
-position = Vector2(329, 326)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F/F6"]
-position = Vector2(21, 27)
-shape = SubResource("RectangleShape2D_la17r")
-
-[node name="F7" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F"]
-position = Vector2(379, 326)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F/F7"]
-position = Vector2(23.5, 27)
-shape = SubResource("RectangleShape2D_hbwp0")
-
-[node name="F8" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F"]
-position = Vector2(431, 326)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F/F8"]
-position = Vector2(24.5, 27)
-shape = SubResource("RectangleShape2D_3yere")
-
-[node name="F9" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F"]
-position = Vector2(482, 326)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F/F9"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_dxg8o")
-
-[node name="F10" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F"]
-position = Vector2(536, 326)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/F/F10"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_faj5v")
-
-[node name="G" type="Node" parent="SubViewportContainer/SubViewport/mapGrid/Grid"]
-
-[node name="G1" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G"]
-position = Vector2(55, 381)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G/G1"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_1h6yd")
-
-[node name="G2" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G"]
-position = Vector2(108, 381)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G/G2"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_54omb")
-
-[node name="G3" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G"]
-position = Vector2(162, 381)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G/G3"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_wsxbt")
-
-[node name="G4" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G"]
-position = Vector2(214, 381)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G/G4"]
-position = Vector2(29, 27)
-shape = SubResource("RectangleShape2D_ccsta")
-
-[node name="G5" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G"]
-position = Vector2(270, 381)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G/G5"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_pbpq8")
-
-[node name="G6" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G"]
-position = Vector2(329, 381)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G/G6"]
-position = Vector2(21, 27)
-shape = SubResource("RectangleShape2D_la17r")
-
-[node name="G7" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G"]
-position = Vector2(379, 381)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G/G7"]
-position = Vector2(23.5, 27)
-shape = SubResource("RectangleShape2D_hbwp0")
-
-[node name="G8" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G"]
-position = Vector2(431, 381)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G/G8"]
-position = Vector2(24.5, 27)
-shape = SubResource("RectangleShape2D_3yere")
-
-[node name="G9" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G"]
-position = Vector2(482, 381)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G/G9"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_dxg8o")
-
-[node name="G10" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G"]
-position = Vector2(536, 381)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/G/G10"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_faj5v")
-
-[node name="H" type="Node" parent="SubViewportContainer/SubViewport/mapGrid/Grid"]
-
-[node name="H1" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H"]
-position = Vector2(55, 436)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H/H1"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_1h6yd")
-
-[node name="H2" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H"]
-position = Vector2(108, 436)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H/H2"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_54omb")
-
-[node name="H3" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H"]
-position = Vector2(162, 436)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H/H3"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_wsxbt")
-
-[node name="H4" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H"]
-position = Vector2(214, 436)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H/H4"]
-position = Vector2(29, 27)
-shape = SubResource("RectangleShape2D_ccsta")
-
-[node name="H5" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H"]
-position = Vector2(270, 436)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H/H5"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_pbpq8")
-
-[node name="H6" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H"]
-position = Vector2(329, 436)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H/H6"]
-position = Vector2(21, 27)
-shape = SubResource("RectangleShape2D_la17r")
-
-[node name="H7" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H"]
-position = Vector2(379, 436)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H/H7"]
-position = Vector2(23.5, 27)
-shape = SubResource("RectangleShape2D_hbwp0")
-
-[node name="H8" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H"]
-position = Vector2(431, 436)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H/H8"]
-position = Vector2(24.5, 27)
-shape = SubResource("RectangleShape2D_3yere")
-
-[node name="H9" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H"]
-position = Vector2(482, 436)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H/H9"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_dxg8o")
-
-[node name="H10" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H"]
-position = Vector2(536, 436)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/H/H10"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_faj5v")
-
-[node name="I" type="Node" parent="SubViewportContainer/SubViewport/mapGrid/Grid"]
-
-[node name="I1" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I"]
-position = Vector2(55, 489)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I/I1"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_1h6yd")
-
-[node name="I2" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I"]
-position = Vector2(108, 489)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I/I2"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_54omb")
-
-[node name="I3" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I"]
-position = Vector2(162, 489)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I/I3"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_wsxbt")
-
-[node name="I4" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I"]
-position = Vector2(214, 489)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I/I4"]
-position = Vector2(29, 27)
-shape = SubResource("RectangleShape2D_ccsta")
-
-[node name="I5" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I"]
-position = Vector2(270, 489)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I/I5"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_pbpq8")
-
-[node name="I6" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I"]
-position = Vector2(329, 489)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I/I6"]
-position = Vector2(21, 27)
-shape = SubResource("RectangleShape2D_la17r")
-
-[node name="I7" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I"]
-position = Vector2(379, 489)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I/I7"]
-position = Vector2(23.5, 27)
-shape = SubResource("RectangleShape2D_hbwp0")
-
-[node name="I8" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I"]
-position = Vector2(431, 489)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I/I8"]
-position = Vector2(24.5, 27)
-shape = SubResource("RectangleShape2D_3yere")
-
-[node name="I9" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I"]
-position = Vector2(482, 489)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I/I9"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_dxg8o")
-
-[node name="I10" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I"]
-position = Vector2(536, 489)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/I/I10"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_faj5v")
-
-[node name="J" type="Node" parent="SubViewportContainer/SubViewport/mapGrid/Grid"]
-
-[node name="J1" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J"]
-position = Vector2(55, 543)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J/J1"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_1h6yd")
-
-[node name="J2" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J"]
-position = Vector2(108, 543)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J/J2"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_54omb")
-
-[node name="J3" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J"]
-position = Vector2(162, 543)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J/J3"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_wsxbt")
-
-[node name="J4" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J"]
-position = Vector2(214, 543)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J/J4"]
-position = Vector2(29, 27)
-shape = SubResource("RectangleShape2D_ccsta")
-
-[node name="J5" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J"]
-position = Vector2(270, 543)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J/J5"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_pbpq8")
-
-[node name="J6" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J"]
-position = Vector2(329, 543)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J/J6"]
-position = Vector2(21, 27)
-shape = SubResource("RectangleShape2D_la17r")
-
-[node name="J7" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J"]
-position = Vector2(379, 543)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J/J7"]
-position = Vector2(23.5, 27)
-shape = SubResource("RectangleShape2D_hbwp0")
-
-[node name="J8" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J"]
-position = Vector2(431, 543)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J/J8"]
-position = Vector2(24.5, 27)
-shape = SubResource("RectangleShape2D_3yere")
-
-[node name="J9" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J"]
-position = Vector2(482, 543)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J/J9"]
-position = Vector2(27, 27)
-shape = SubResource("RectangleShape2D_dxg8o")
-
-[node name="J10" type="Area2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J"]
-position = Vector2(536, 543)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid/J/J10"]
-position = Vector2(26, 27)
-shape = SubResource("RectangleShape2D_faj5v")
-
-[node name="PlayerIcon" parent="SubViewportContainer/SubViewport" instance=ExtResource("7_ldosm")]
-texture_filter = 1
-position = Vector2(100, 50)
-scale = Vector2(0.005, 0.005)
-
 [node name="UI" type="Control" parent="."]
 layout_mode = 1
-anchor_left = 0.561632
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_left = 0.566146
+anchor_right = 1.00104
+anchor_bottom = 0.998148
 grow_horizontal = 0
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
@@ -883,30 +107,33 @@ metadata/_edit_use_anchors_ = true
 [node name="ScrollContainer" type="ScrollContainer" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.423762
-anchor_bottom = 0.938272
+anchor_left = 0.0191617
+anchor_top = 0.0844156
+anchor_right = 0.51497
+anchor_bottom = 0.891466
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/ScrollContainer"]
+custom_minimum_size = Vector2(400, 150)
 layout_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="LogPanel" type="Panel" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.441584
-anchor_top = 0.117284
-anchor_right = 0.986139
-anchor_bottom = 0.989198
+anchor_left = 0.534132
+anchor_top = 0.0844156
+anchor_right = 0.985629
+anchor_bottom = 0.988868
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="UI/LogPanel"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -915,10 +142,16 @@ theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 10
+metadata/_edit_use_anchors_ = true
 
 [node name="Log" type="RichTextLabel" parent="UI/LogPanel/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
 bbcode_enabled = true
 scroll_following = true
 script = ExtResource("8_jb1d5")
@@ -926,11 +159,12 @@ script = ExtResource("8_jb1d5")
 [node name="SR" type="Label" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.947531
-anchor_right = 0.423762
-anchor_bottom = 0.989198
+anchor_left = 0.0191617
+anchor_top = 0.900742
+anchor_right = 0.51497
+anchor_bottom = 0.988868
 grow_vertical = 0
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_wrb36")
 text = "X Students Remain"
 horizontal_alignment = 1
@@ -942,10 +176,10 @@ metadata/_edit_use_anchors_ = true
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.943576
-anchor_top = 0.0200617
-anchor_right = 0.986979
-anchor_bottom = 0.0972222
+anchor_left = 0.960417
+anchor_top = 0.0138889
+anchor_right = 0.992708
+anchor_bottom = 0.0712963
 grow_horizontal = 0
 theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
@@ -961,4 +195,4 @@ script = ExtResource("6_65q8j")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="area_entered" from="MouseTracker" to="MouseTracker" method="_on_area_entered"]
-[connection signal="clickedArea" from="MouseTracker" to="SubViewportContainer/SubViewport/mapGrid/Grid" method="areaClicked"]
+[connection signal="clickedArea" from="MouseTracker" to="mapGrid/Grid" method="areaClicked"]

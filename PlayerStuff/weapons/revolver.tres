@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://rdw0n71n5fna"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_ntx6f"]
+
+[resource]
+script = ExtResource("1_ntx6f")
+wName = "Revolver"
+meleeLvl = 0
+rangedLvl = 2
+killMessages = ["", "", ""]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://bsawbv18tly3n"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_suiin"]
+
+[resource]
+script = ExtResource("1_suiin")
+wName = "Boomerang"
+meleeLvl = 1
+rangedLvl = 1
+killMessages = ["", "", ""]

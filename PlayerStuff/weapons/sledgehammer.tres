@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://bkfr2qecybqtl"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_pi4pw"]
+
+[resource]
+script = ExtResource("1_pi4pw")
+wName = "Sledgehammer"
+meleeLvl = 2
+rangedLvl = 0
+killMessages = ["", "", ""]
