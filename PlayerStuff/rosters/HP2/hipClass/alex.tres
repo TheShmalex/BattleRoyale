@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlayerResource" load_steps=3 format=3 uid="uid://dif8y6dmjx223"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Player.gd" id="1_oufga"]
+[ext_resource type="Resource" uid="uid://8y4k1xa2j76w" path="res://PlayerStuff/weapons/typewritergun.tres" id="2_42uds"]
+
+[resource]
+script = ExtResource("1_oufga")
+fName = "Alex"
+lName = "Evans"
+color = Color(0, 0, 0, 1)
+meleeLvl = 0
+rangedLvl = 0
+weapon = ExtResource("2_42uds")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://dmdoqm8a2gb4s"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_7tqya"]
+
+[resource]
+script = ExtResource("1_7tqya")
+wName = "Throwing Stars"
+meleeLvl = 1
+rangedLvl = 2
+killMessages = ["1 launched 3 throwing stars into 2's stomach", "2 grabbed a throwing star out of 1's hand and cut themselves leading to their untimely death", "1 incapacitated 2 with their throwing stars"]

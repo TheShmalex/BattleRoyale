@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlayerResource" load_steps=3 format=3 uid="uid://lu08610a1s28"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Player.gd" id="1_pf8lp"]
+[ext_resource type="Resource" uid="uid://b4xobpdfxu0kg" path="res://PlayerStuff/weapons/huntingknife.tres" id="2_ab5pg"]
+
+[resource]
+script = ExtResource("1_pf8lp")
+fName = "Bella"
+lName = "Mallick"
+color = Color(0, 0, 0, 1)
+meleeLvl = 0
+rangedLvl = 0
+weapon = ExtResource("2_ab5pg")

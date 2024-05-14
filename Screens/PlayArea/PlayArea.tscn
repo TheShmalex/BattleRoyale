@@ -1,14 +1,21 @@
-[gd_scene load_steps=32 format=3 uid="uid://c1subyoeemka5"]
+[gd_scene load_steps=40 format=3 uid="uid://c1subyoeemka5"]
 
 [ext_resource type="Script" path="res://Screens/PlayArea/MouseTracker.gd" id="1_a8bkx"]
 [ext_resource type="Script" path="res://Screens/PlayArea/Glogic.gd" id="1_clthu"]
 [ext_resource type="Script" path="res://Screens/PlayArea/PlayArea.gd" id="1_nnf3k"]
 [ext_resource type="Texture2D" uid="uid://clmp6yk6o6b5p" path="res://Assets/pdf2png/bk_sans_006105/Map.png" id="2_vjde7"]
 [ext_resource type="Script" path="res://Screens/PlayArea/Grid.gd" id="3_cmsep"]
-[ext_resource type="Resource" uid="uid://txw0v74napkw" path="res://PlayerStuff/rosters/HP3/HP3.tres" id="3_j7mwk"]
+[ext_resource type="Resource" uid="uid://txw0v74napkw" path="res://PlayerStuff/rosters/HP2/HP2.tres" id="3_j7mwk"]
+[ext_resource type="Resource" uid="uid://12h77o0tyw8e" path="res://PlayerStuff/weapons/dartset.tres" id="5_4vsjs"]
 [ext_resource type="Texture2D" uid="uid://c6xa88r7ogpsk" path="res://Assets/gear.png" id="5_a6bah"]
+[ext_resource type="Resource" uid="uid://j6pn2qrmsg7a" path="res://PlayerStuff/weapons/grenades.tres" id="6_5v8la"]
 [ext_resource type="Script" path="res://Screens/PlayArea/PlayAreaSettingsButton.gd" id="6_65q8j"]
 [ext_resource type="PackedScene" uid="uid://c0hmwyc41teyw" path="res://Screens/PlayArea/PlayerIcon.tscn" id="7_ldosm"]
+[ext_resource type="Resource" uid="uid://b4xobpdfxu0kg" path="res://PlayerStuff/weapons/huntingknife.tres" id="7_pxpkk"]
+[ext_resource type="Resource" uid="uid://dmdoqm8a2gb4s" path="res://PlayerStuff/weapons/throwingstars.tres" id="8_2jvue"]
+[ext_resource type="Script" path="res://Screens/PlayArea/Log.gd" id="8_jb1d5"]
+[ext_resource type="Script" path="res://Screens/PlayArea/SR.gd" id="9_56w3f"]
+[ext_resource type="Resource" uid="uid://8y4k1xa2j76w" path="res://PlayerStuff/weapons/typewritergun.tres" id="9_84d1j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l5vvi"]
 radius = 2.0
@@ -73,6 +80,13 @@ size = Vector2(54, 53)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yjeh6"]
 size = Vector2(52, 53)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrb36"]
+bg_color = Color(0.113725, 0.105882, 0.109804, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a32b1"]
 
 [node name="PlayArea" type="Control"]
@@ -98,8 +112,10 @@ shape = SubResource("CircleShape2D_l5vvi")
 [node name="Glogic" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_clthu")
+weapons = [ExtResource("5_4vsjs"), ExtResource("6_5v8la"), ExtResource("7_pxpkk"), ExtResource("8_2jvue"), ExtResource("9_84d1j")]
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.557292
@@ -123,6 +139,7 @@ metadata/_edit_use_anchors_ = true
 script = ExtResource("3_cmsep")
 
 [node name="MapSprite" type="Sprite2D" parent="SubViewportContainer/SubViewport/mapGrid/Grid"]
+texture_filter = 1
 position = Vector2(321, 324)
 scale = Vector2(0.554883, 0.55527)
 texture = ExtResource("2_vjde7")
@@ -866,8 +883,8 @@ metadata/_edit_use_anchors_ = true
 [node name="ScrollContainer" type="ScrollContainer" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.423695
-anchor_bottom = 1.0
+anchor_right = 0.423762
+anchor_bottom = 0.938272
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
@@ -904,6 +921,22 @@ unique_name_in_owner = true
 layout_mode = 2
 bbcode_enabled = true
 scroll_following = true
+script = ExtResource("8_jb1d5")
+
+[node name="SR" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.947531
+anchor_right = 0.423762
+anchor_bottom = 0.989198
+grow_vertical = 0
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxFlat_wrb36")
+text = "X Students Remain"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("9_56w3f")
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
 custom_minimum_size = Vector2(40, 40)

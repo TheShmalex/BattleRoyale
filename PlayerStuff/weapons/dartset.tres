@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://12h77o0tyw8e"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_rhrvk"]
+
+[resource]
+script = ExtResource("1_rhrvk")
+wName = "Dart Set"
+meleeLvl = 1
+rangedLvl = 1
+killMessages = ["2 is knocked unconcious by 1's dartboard to the head and then eaten by wolves", "1 manages to pierce straight through 2's chest with a dart", "1 forcefeeds 2 a pair of darts, causing them to asphyxiate"]

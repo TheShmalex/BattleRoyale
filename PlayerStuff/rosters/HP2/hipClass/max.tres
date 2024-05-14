@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlayerResource" load_steps=3 format=3 uid="uid://dqksv73bg3moe"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Player.gd" id="1_2ndn0"]
+[ext_resource type="Resource" uid="uid://12h77o0tyw8e" path="res://PlayerStuff/weapons/dartset.tres" id="2_pe83r"]
+
+[resource]
+script = ExtResource("1_2ndn0")
+fName = "Max"
+lName = "Hoffman"
+color = Color(0, 0, 0, 1)
+meleeLvl = 0
+rangedLvl = 0
+weapon = ExtResource("2_pe83r")

@@ -1,3 +1,3 @@
 extends Label
 func _ready():
-	text = $"../../../..".player.fName
+	text = $"../../../../..".player.fName

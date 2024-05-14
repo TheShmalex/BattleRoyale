@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://b4xobpdfxu0kg"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_a6isj"]
+
+[resource]
+script = ExtResource("1_a6isj")
+wName = "Hunting Knife"
+meleeLvl = 2
+rangedLvl = 0
+killMessages = ["2 was stabbed repeatadly by 1's hunting knife", "2 developed tetanus after being poked by 1's hunting knife", "2's throat was slit by 1's hunting knife"]

@@ -1,3 +1,4 @@
+WeaponResource
 RosterResource
 PlayerResource
 Resource

@@ -6,3 +6,6 @@
 script = ExtResource("1_o81ln")
 fName = "Bryan"
 lName = "Tristan"
+color = Color(0, 0, 0, 1)
+meleeLvl = 0
+rangedLvl = 0

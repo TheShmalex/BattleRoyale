@@ -1,6 +1,6 @@
 extends Control
 
-var rosters := [load("res://PlayerStuff/rosters/HP3/HP3.tres")]
+var rosters := [load("res://PlayerStuff/rosters/HP2/HP2.tres")]
 var rosterCard := preload("res://PlayerStuff/rosterCard/RosterCard.tscn")
 var anyRosterSelected := false
 var selectedRoster

@@ -1,95 +1,136 @@
-[gd_scene load_steps=23 format=3 uid="uid://canr5o0nrkhuk"]
+[gd_scene load_steps=30 format=3 uid="uid://canr5o0nrkhuk"]
 
 [ext_resource type="Texture2D" uid="uid://dp8kptpywc167" path="res://Assets/Pixel UI pack 3/06.png" id="1_2o6e4"]
 [ext_resource type="Script" path="res://PlayerStuff/playerCard/PlayerCard.gd" id="1_yxlvh"]
 [ext_resource type="Texture2D" uid="uid://dl15puekqcitx" path="res://Assets/gun.png" id="2_8q53u"]
-[ext_resource type="Resource" uid="uid://dif8y6dmjx223" path="res://PlayerStuff/rosters/HP3/hipClass/alex.tres" id="2_bfsn3"]
+[ext_resource type="Resource" uid="uid://dif8y6dmjx223" path="res://PlayerStuff/rosters/HP2/hipClass/alex.tres" id="2_ijaxj"]
 [ext_resource type="Texture2D" uid="uid://d32eqbdnedwr5" path="res://Assets/sword.png" id="3_dtv7u"]
 [ext_resource type="Script" path="res://PlayerStuff/playerCard/lNameLabel.gd" id="6_7fntf"]
 [ext_resource type="Script" path="res://PlayerStuff/playerCard/fNameLabel.gd" id="7_8qs0m"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmwkb"]
-bg_color = Color(0.145098, 0.145098, 0.145098, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+[sub_resource type="Shader" id="Shader_42k3b"]
+code = "shader_type canvas_item;
 
-[sub_resource type="Theme" id="Theme_uja53"]
-Panel/styles/panel = SubResource("StyleBoxFlat_dmwkb")
+uniform sampler2D dissolve_texture : source_color;
+uniform float dissolve_value : hint_range(0,1);
+uniform float burn_size: hint_range(0.0, 1.0, 0.01);
+uniform vec4 burn_color: source_color;
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ldrl2"]
-atlas = ExtResource("1_2o6e4")
-region = Rect2(0, 48, 48, 16)
+void fragment(){
+    vec4 main_texture = texture(TEXTURE, UV);
+    vec4 noise_texture = texture(dissolve_texture, UV);
+	
+	// This is needed to avoid keeping a small burn_color dot with dissolve being 0 or 1
+	// is there another way to do it?
+	float burn_size_step = burn_size * step(0.001, dissolve_value) * step(dissolve_value, 0.999);
+	float threshold = smoothstep(noise_texture.x-burn_size_step, noise_texture.x, dissolve_value);
+	float border = smoothstep(noise_texture.x, noise_texture.x + burn_size_step, dissolve_value);
+	
+	COLOR.a *= threshold;
+	COLOR.rgb = mix(burn_color.rgb, main_texture.rgb, border);
+}"
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kjm85"]
-atlas = ExtResource("1_2o6e4")
-region = Rect2(48, 48, 48, 16)
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_4riom"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xadrx"]
-atlas = ExtResource("1_2o6e4")
-region = Rect2(96, 48, 48, 16)
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xub6a"]
+width = 200
+height = 75
+noise = SubResource("FastNoiseLite_4riom")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_78ql0"]
-atlas = ExtResource("1_2o6e4")
-region = Rect2(144, 48, 48, 16)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6xvv7"]
+resource_local_to_scene = true
+shader = SubResource("Shader_42k3b")
+shader_parameter/dissolve_value = 1.0
+shader_parameter/burn_size = 0.1
+shader_parameter/burn_color = Color(1, 0, 0, 1)
+shader_parameter/dissolve_texture = SubResource("NoiseTexture2D_xub6a")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lqw8i"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cfm04"]
 atlas = ExtResource("1_2o6e4")
 region = Rect2(192, 48, 48, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_llrwd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_78ql0"]
 atlas = ExtResource("1_2o6e4")
-region = Rect2(0, 64, 48, 16)
+region = Rect2(144, 48, 48, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8w6wb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xadrx"]
 atlas = ExtResource("1_2o6e4")
-region = Rect2(48, 64, 48, 16)
+region = Rect2(96, 48, 48, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jh3hr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjm85"]
 atlas = ExtResource("1_2o6e4")
-region = Rect2(96, 64, 48, 16)
+region = Rect2(48, 48, 48, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b4jfk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldrl2"]
 atlas = ExtResource("1_2o6e4")
-region = Rect2(144, 64, 48, 16)
+region = Rect2(0, 48, 48, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5rcj7"]
-atlas = ExtResource("1_2o6e4")
-region = Rect2(192, 64, 48, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_xv88q"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_grcn1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ldrl2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kjm85")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xadrx")
+"texture": SubResource("AtlasTexture_cfm04")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_78ql0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cfm04")
+"texture": SubResource("AtlasTexture_xadrx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_llrwd")
+"texture": SubResource("AtlasTexture_kjm85")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8w6wb")
-}, {
+"texture": SubResource("AtlasTexture_ldrl2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rcj7"]
+atlas = ExtResource("1_2o6e4")
+region = Rect2(192, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4jfk"]
+atlas = ExtResource("1_2o6e4")
+region = Rect2(144, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jh3hr"]
+atlas = ExtResource("1_2o6e4")
+region = Rect2(96, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8w6wb"]
+atlas = ExtResource("1_2o6e4")
+region = Rect2(48, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_llrwd"]
+atlas = ExtResource("1_2o6e4")
+region = Rect2(0, 64, 48, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ke6gn"]
+animations = [{
+"frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jh3hr")
+"texture": SubResource("AtlasTexture_5rcj7")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_b4jfk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5rcj7")
+"texture": SubResource("AtlasTexture_jh3hr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8w6wb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_llrwd")
 }],
 "loop": true,
 "name": &"default",
@@ -100,45 +141,118 @@ animations = [{
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nq755"]
 
+[sub_resource type="Animation" id="Animation_xultm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewportContainer:material:shader_parameter/dissolve_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_q84ma"]
+resource_name = "dis"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"announceDisentigration"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SubViewportContainer:material:shader_parameter/dissolve_value")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cxxpl"]
+_data = {
+"RESET": SubResource("Animation_xultm"),
+"dis": SubResource("Animation_q84ma")
+}
+
 [node name="PlayerCard" type="Control"]
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 3
 anchor_right = 0.173611
 anchor_bottom = 0.115741
 script = ExtResource("1_yxlvh")
-player = ExtResource("2_bfsn3")
+player = ExtResource("2_ijaxj")
 metadata/_edit_use_anchors_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-custom_minimum_size = Vector2(200, 75)
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_6xvv7")
 layout_mode = 0
-anchor_right = 1.01
-anchor_bottom = 1.02667
-offset_bottom = -2.0
-theme_override_constants/margin_left = 2
+anchor_right = 1.0
+anchor_bottom = 0.999998
+offset_right = -160.0
+offset_bottom = -35.0
 metadata/_edit_use_anchors_ = true
 
-[node name="card" type="Panel" parent="MarginContainer"]
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(200, 75)
+render_target_update_mode = 4
+
+[node name="card" type="Panel" parent="SubViewportContainer/SubViewport"]
+show_behind_parent = true
+texture_filter = 1
 custom_minimum_size = Vector2(200, 75)
-layout_mode = 2
-theme = SubResource("Theme_uja53")
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.999998
+offset_bottom = 0.000167847
+theme_override_styles/panel = SubResource("StyleBoxFlat_lqw8i")
 metadata/_edit_use_anchors_ = true
 
-[node name="MeleeBar" type="AnimatedSprite2D" parent="MarginContainer/card"]
+[node name="MeleeBar" type="AnimatedSprite2D" parent="SubViewportContainer/SubViewport/card"]
 texture_filter = 1
 position = Vector2(169, 42)
 scale = Vector2(1.2, 1.57452)
-sprite_frames = SubResource("SpriteFrames_xv88q")
-frame = 8
+sprite_frames = SubResource("SpriteFrames_grcn1")
 
-[node name="ShootingBar" type="AnimatedSprite2D" parent="MarginContainer/card"]
+[node name="ShootingBar" type="AnimatedSprite2D" parent="SubViewportContainer/SubViewport/card"]
 texture_filter = 1
 position = Vector2(169, 63)
 scale = Vector2(1.2, 1.57452)
-sprite_frames = SubResource("SpriteFrames_xv88q")
-frame = 4
+sprite_frames = SubResource("SpriteFrames_ke6gn")
 
-[node name="location" type="Label" parent="MarginContainer/card"]
+[node name="location" type="Label" parent="SubViewportContainer/SubViewport/card"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -147,9 +261,8 @@ anchor_top = 0.4
 anchor_right = 0.31
 anchor_bottom = 0.706667
 text = "Loc"
-metadata/_edit_use_anchors_ = true
 
-[node name="nature" type="Label" parent="MarginContainer/card"]
+[node name="nature" type="Label" parent="SubViewportContainer/SubViewport/card"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -159,52 +272,65 @@ anchor_right = 0.31
 anchor_bottom = 0.973333
 text = "Nat
 "
-metadata/_edit_use_anchors_ = true
 
-[node name="Gun" type="Sprite2D" parent="MarginContainer/card"]
+[node name="Gun" type="Sprite2D" parent="SubViewportContainer/SubViewport/card"]
 position = Vector2(133.25, 64.5)
 scale = Vector2(3.5, 3.5)
 texture = ExtResource("2_8q53u")
 
-[node name="Sword" type="Sprite2D" parent="MarginContainer/card"]
+[node name="Sword" type="Sprite2D" parent="SubViewportContainer/SubViewport/card"]
 position = Vector2(133, 42)
 scale = Vector2(3.08333, 3.08333)
 texture = ExtResource("3_dtv7u")
 region_enabled = true
 region_rect = Rect2(0, 1, 3, 4)
 
-[node name="NameContainer" type="HBoxContainer" parent="MarginContainer/card"]
+[node name="NameContainer" type="HBoxContainer" parent="SubViewportContainer/SubViewport/card"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.595
 anchor_bottom = 0.426666
-metadata/_edit_use_anchors_ = true
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/card/NameContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="SubViewportContainer/SubViewport/card/NameContainer"]
 custom_minimum_size = Vector2(5, 0)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_mkrov")
 
-[node name="lName" type="Label" parent="MarginContainer/card/NameContainer"]
+[node name="lName" type="Label" parent="SubViewportContainer/SubViewport/card/NameContainer"]
 texture_filter = 1
 layout_mode = 2
 text = "Lname"
 script = ExtResource("6_7fntf")
 metadata/_edit_use_anchors_ = true
 
-[node name="," type="Label" parent="MarginContainer/card/NameContainer"]
+[node name="," type="Label" parent="SubViewportContainer/SubViewport/card/NameContainer"]
 texture_filter = 1
 layout_mode = 2
 text = ","
 metadata/_edit_use_anchors_ = true
 
-[node name="fName" type="Label" parent="MarginContainer/card/NameContainer"]
+[node name="fName" type="Label" parent="SubViewportContainer/SubViewport/card/NameContainer"]
 texture_filter = 1
 layout_mode = 2
 text = "Fname"
 script = ExtResource("7_8qs0m")
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="MarginContainer"]
+[node name="Button" type="Button" parent="."]
 layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 0.999998
 theme_override_styles/normal = SubResource("StyleBoxEmpty_nq755")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cxxpl")
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

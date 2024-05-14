@@ -6,3 +6,6 @@
 script = ExtResource("1_fwy0d")
 fName = "Addisalem"
 lName = "Wosoro"
+color = Color(0, 0, 0, 1)
+meleeLvl = 0
+rangedLvl = 0

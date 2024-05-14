@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://8y4k1xa2j76w"]
+
+[ext_resource type="Script" path="res://PlayerStuff/Weapon.gd" id="1_y1if7"]
+
+[resource]
+script = ExtResource("1_y1if7")
+wName = "Typewriter Gun"
+meleeLvl = 0
+rangedLvl = 4
+killMessages = ["1 rattled 2 with their typewriter gun ", "2 was filled with holes by 1's typewriter gun", "1 blew away 2 using their typewriter gun."]
