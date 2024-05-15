@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="RosterResource" load_steps=28 format=3 uid="uid://txw0v74napkw"]
+[gd_resource type="Resource" script_class="RosterResource" load_steps=27 format=3 uid="uid://txw0v74napkw"]
 
 [ext_resource type="Resource" uid="uid://dctfpnsv1iv3i" path="res://PlayerStuff/rosters/HP2/hipClass/addisalem.tres" id="1_cbndc"]
 [ext_resource type="Script" path="res://PlayerStuff/Roster.gd" id="1_uh3au"]
@@ -16,7 +16,6 @@
 [ext_resource type="Resource" uid="uid://c2u50meqbmqar" path="res://PlayerStuff/rosters/HP2/hipClass/lakiya.tres" id="13_ugwys"]
 [ext_resource type="Resource" uid="uid://g5l2g1q6g64a" path="res://PlayerStuff/rosters/HP2/hipClass/laurel.tres" id="14_qsv4v"]
 [ext_resource type="Resource" uid="uid://oqx1qvelnkpn" path="res://PlayerStuff/rosters/HP2/hipClass/levi.tres" id="15_si8cq"]
-[ext_resource type="Resource" uid="uid://d2txkx6a1337v" path="res://PlayerStuff/rosters/HP2/hipClass/luz.tres" id="16_i1v3m"]
 [ext_resource type="Resource" uid="uid://lu08610a1s28" path="res://PlayerStuff/rosters/HP2/hipClass/mako.tres" id="17_y608s"]
 [ext_resource type="Resource" uid="uid://dqksv73bg3moe" path="res://PlayerStuff/rosters/HP2/hipClass/max.tres" id="18_xdmam"]
 [ext_resource type="Resource" uid="uid://b17460adixhrk" path="res://PlayerStuff/rosters/HP2/hipClass/owen.tres" id="19_ff8nn"]
@@ -31,4 +30,4 @@
 [resource]
 script = ExtResource("1_uh3au")
 rosterName = "Hippensteel Period 2"
-players = [ExtResource("1_cbndc"), ExtResource("2_8vyp6"), ExtResource("3_es40s"), ExtResource("4_uev0v"), ExtResource("5_dl8fu"), ExtResource("6_v3iyp"), ExtResource("7_1gong"), ExtResource("8_86wj7"), ExtResource("9_jkxsd"), ExtResource("10_uq21t"), ExtResource("11_pwh8c"), ExtResource("12_38nsb"), ExtResource("13_ugwys"), ExtResource("14_qsv4v"), ExtResource("15_si8cq"), ExtResource("16_i1v3m"), ExtResource("17_y608s"), ExtResource("18_xdmam"), ExtResource("19_ff8nn"), ExtResource("20_mq1au"), ExtResource("21_b30nf"), ExtResource("22_npwy8"), ExtResource("23_awsxg"), ExtResource("24_u10e5"), ExtResource("25_fx0kg"), ExtResource("26_dputw")]
+players = [ExtResource("1_cbndc"), ExtResource("2_8vyp6"), ExtResource("3_es40s"), ExtResource("4_uev0v"), ExtResource("5_dl8fu"), ExtResource("6_v3iyp"), ExtResource("7_1gong"), ExtResource("8_86wj7"), ExtResource("9_jkxsd"), ExtResource("10_uq21t"), ExtResource("11_pwh8c"), ExtResource("12_38nsb"), ExtResource("13_ugwys"), ExtResource("14_qsv4v"), ExtResource("15_si8cq"), ExtResource("17_y608s"), ExtResource("18_xdmam"), ExtResource("19_ff8nn"), ExtResource("20_mq1au"), ExtResource("21_b30nf"), ExtResource("22_npwy8"), ExtResource("23_awsxg"), ExtResource("24_u10e5"), ExtResource("25_fx0kg"), ExtResource("26_dputw")]

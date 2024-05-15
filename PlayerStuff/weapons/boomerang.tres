@@ -7,4 +7,4 @@ script = ExtResource("1_suiin")
 wName = "Boomerang"
 meleeLvl = 1
 rangedLvl = 1
-killMessages = ["", "", ""]
+killMessages = ["1 put 2's shrimps on the barbie with their boomerang ", "1's boomerang came back, but 2 won't", "2 felt the thunder down under from 1's boomerang"]

@@ -76,7 +76,6 @@ script = ExtResource("1_clthu")
 weapons = [ExtResource("5_4vsjs"), ExtResource("6_5v8la"), ExtResource("7_pxpkk"), ExtResource("8_2jvue"), ExtResource("9_84d1j"), ExtResource("10_0slvi"), ExtResource("11_xqr7u"), ExtResource("12_snya5"), ExtResource("13_w8uqc"), ExtResource("14_bs0bv"), ExtResource("15_t7p0w"), ExtResource("16_vscao"), ExtResource("17_rpkrr"), ExtResource("18_mgu6x"), ExtResource("19_upeqn"), ExtResource("20_t83dt"), ExtResource("21_f405u"), ExtResource("22_6mgdw"), ExtResource("23_7u1to"), ExtResource("24_ebqpc"), ExtResource("25_bskfv"), ExtResource("26_8k55c"), ExtResource("27_u6lwt"), ExtResource("28_6gln8"), ExtResource("29_02d7l"), ExtResource("30_7wmnd"), ExtResource("31_uwwp5")]
 
 [node name="mapGrid" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchor_right = 0.557
 anchor_bottom = 1.0
@@ -95,6 +94,18 @@ texture = ExtResource("2_vjde7")
 region_enabled = true
 region_rect = Rect2(277, 213, 1157, 1167)
 
+[node name="Land" type="Area2D" parent="mapGrid/Grid"]
+unique_name_in_owner = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mapGrid/Grid/Land"]
+position = Vector2(816, 112)
+build_mode = 1
+polygon = PackedVector2Array(-17, -3, -289, 77, -343, 113, -389, 133, -436, 179, -477, 193, -549, 252, -621, 330, -659, 409, -682, 499, -676, 560, -645, 644, -615, 716, -586, 735, -564, 795, -529, 825, -494, 838, -399, 837, -218, 798, -65, 736, 27, 663, 84, 573, 124, 514, 157, 432, 160, 368, 182, 233, 154, 160, 109, 127, 106, 86, 84, 30, 55, 22)
+
+[node name="School" type="Marker2D" parent="mapGrid/Grid"]
+unique_name_in_owner = true
+position = Vector2(695, 672)
+
 [node name="UI" type="Control" parent="."]
 layout_mode = 1
 anchor_left = 0.566146
@@ -107,9 +118,9 @@ metadata/_edit_use_anchors_ = true
 [node name="ScrollContainer" type="ScrollContainer" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0191617
+anchor_left = 0.0179641
 anchor_top = 0.0844156
-anchor_right = 0.51497
+anchor_right = 0.513772
 anchor_bottom = 0.891466
 grow_horizontal = 2
 grow_vertical = 2
@@ -194,5 +205,10 @@ expand_icon = true
 script = ExtResource("6_65q8j")
 metadata/_edit_use_anchors_ = true
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
 [connection signal="area_entered" from="MouseTracker" to="MouseTracker" method="_on_area_entered"]
 [connection signal="clickedArea" from="MouseTracker" to="mapGrid/Grid" method="areaClicked"]
+[connection signal="timeout" from="Timer" to="Glogic" method="_on_timer_timeout"]

@@ -7,4 +7,4 @@ script = ExtResource("1_gx650")
 wName = "Daggers"
 meleeLvl = 2
 rangedLvl = 1
-killMessages = ["", "", ""]
+killMessages = ["3 daggers were planted in 2's back by 1", "1 put a dagger in 2's sandwich", "2 was stabbed in the back by 1"]

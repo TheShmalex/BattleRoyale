@@ -7,4 +7,4 @@ script = ExtResource("1_7jygy")
 wName = "Grenades"
 meleeLvl = 1
 rangedLvl = 3
-killMessages = ["1 snuck a grenade into 2's day pack", "2 was blown to bits after 1 hucked a grenade in their face", "2's lower half is blown off by 1's grenade and bleeds out"]
+killMessages = ["1 snuck a grenade into 2's day pack", "2 went out with a bang after being struck with 1's grenade", "2's lower half is blown off by 1's grenade and bleeds out"]

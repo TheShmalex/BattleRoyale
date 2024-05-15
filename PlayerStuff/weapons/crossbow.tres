@@ -7,4 +7,4 @@ script = ExtResource("1_xqegg")
 wName = "Crossbow"
 meleeLvl = 0
 rangedLvl = 3
-killMessages = ["", "", ""]
+killMessages = ["2 was impaled by a bolt launched from 1's crossbow", "1 threw a crossbow bolt into 2's head", "2 was frozen in fear when 1 shot them with a crossbow "]

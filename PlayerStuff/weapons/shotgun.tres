@@ -7,4 +7,4 @@ script = ExtResource("1_v7dhd")
 wName = "Shotgun"
 meleeLvl = 2
 rangedLvl = 3
-killMessages = ["", "", ""]
+killMessages = ["2's arm was blown to bits by 1's shotgun", "2 got double pumped by 1's shotgun", "1 blew 2's brains out with a shotgun "]

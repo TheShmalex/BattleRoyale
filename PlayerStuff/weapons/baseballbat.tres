@@ -7,4 +7,4 @@ script = ExtResource("1_7gtv6")
 wName = "Baseball Bat"
 meleeLvl = 3
 rangedLvl = 0
-killMessages = ["", "", ""]
+killMessages = ["1 hit a home run with 2's head", "2 struck out in a hit to the stomach by 1's baseball bat", "2 can no longer walk after a double hit to the knees by 1's baseball bat"]

@@ -7,4 +7,4 @@ script = ExtResource("1_lq6rt")
 wName = "Kevlar Vest"
 meleeLvl = 3
 rangedLvl = 0
-killMessages = ["", "", ""]
+killMessages = ["1 tanked a pair shots with their kevlar from 2 and took them down", "2 didn't expect 1 to play dead and come back to strike a gain with their kevlar vest", "1's kevlar vest absorbed 2's attack and struck back"]

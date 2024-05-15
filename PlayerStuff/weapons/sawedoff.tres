@@ -7,4 +7,4 @@ script = ExtResource("1_fgkx6")
 wName = "Sawed-Off"
 meleeLvl = 1
 rangedLvl = 4
-killMessages = ["", "", ""]
+killMessages = ["1 blew 2 apart with a Sawed-Off", "2 passed away in their sleep. 1 used them as target practice with their Sawed-Off", "2 felt a buckshot enter their skull from 1's sawed off"]

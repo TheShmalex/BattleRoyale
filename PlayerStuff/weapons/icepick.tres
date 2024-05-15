@@ -7,4 +7,4 @@ script = ExtResource("1_5616f")
 wName = "Icepick"
 meleeLvl = 3
 rangedLvl = 0
-killMessages = ["", "", ""]
+killMessages = ["1 climbed up mount 2 with an ice pick", "1 gave 2 the cold shoulder", "2 was iced by 1's ice pick"]

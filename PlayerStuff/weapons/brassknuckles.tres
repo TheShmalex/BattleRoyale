@@ -7,4 +7,4 @@ script = ExtResource("1_8x18f")
 wName = "Brass Knuckles"
 meleeLvl = 2
 rangedLvl = 0
-killMessages = ["", "", ""]
+killMessages = ["1 astounded 2 with their vocab knowledge to death", "In an act of fisticuffs, 1 beat 2 to a pulp with their brass knuckles, ", "2 was eviscerated by 1's knuckles of brass"]

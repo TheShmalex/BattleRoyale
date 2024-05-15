@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_ih24o")
 wName = "Tennis Racquet"
-meleeLvl = 0
+meleeLvl = 1
 rangedLvl = 0
-killMessages = ["", "", ""]
+killMessages = ["2 did not love 1 after being served by a tennis racquet", "1 aced 2 with a tennis racquet", "1 had the advantage over 2 with their racquet"]

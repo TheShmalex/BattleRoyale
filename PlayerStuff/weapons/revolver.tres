@@ -7,4 +7,4 @@ script = ExtResource("1_ntx6f")
 wName = "Revolver"
 meleeLvl = 0
 rangedLvl = 2
-killMessages = ["", "", ""]
+killMessages = ["1 quickfired on 2 with a revolver ", "This town wasn't big enough for 1 and 2, leading to 1 shooting 2 in the back", "2 was killed at high noon by 1 with a revolver"]

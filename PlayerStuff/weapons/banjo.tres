@@ -7,4 +7,4 @@ script = ExtResource("1_t6nrb")
 wName = "Banjo"
 meleeLvl = 1
 rangedLvl = 0
-killMessages = ["", "", ""]
+killMessages = ["1 played an entrancing tune for 2, lulling them into a false sense of security", "1 slammed their banjo over 2's head", "2 was asphyxiated by 1's banjo string"]

@@ -7,4 +7,4 @@ script = ExtResource("1_jyrat")
 wName = "Pistol"
 meleeLvl = 0
 rangedLvl = 2
-killMessages = ["", "", ""]
+killMessages = ["1 pistol whipped 2 to death", "2 was filled with lead by 1's pistol", "1 shot 2 in the foot with a pistol, causing them to trip off a cliff"]

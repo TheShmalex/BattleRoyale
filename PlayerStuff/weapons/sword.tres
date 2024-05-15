@@ -7,4 +7,4 @@ script = ExtResource("1_jgnbf")
 wName = "Sword"
 meleeLvl = 2
 rangedLvl = 0
-killMessages = ["", "", ""]
+killMessages = ["1 impaled 2 with a swift stab with their sword", "2 was decapitated by 1's sword", "2 was slain by 1's sword"]

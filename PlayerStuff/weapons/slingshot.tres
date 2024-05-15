@@ -7,4 +7,4 @@ script = ExtResource("1_8e0ib")
 wName = "Slingshot"
 meleeLvl = 0
 rangedLvl = 2
-killMessages = ["", "", ""]
+killMessages = ["1 shot the carcass of a robin into 2's side", "1 shoots a slipper into 2's soup", "2 was hit by a rock from1's slingshot"]

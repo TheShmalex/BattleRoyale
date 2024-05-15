@@ -7,4 +7,4 @@ script = ExtResource("1_7u12i")
 wName = "Bow & Arrows"
 meleeLvl = 0
 rangedLvl = 2
-killMessages = ["", "", ""]
+killMessages = ["1 sniped 2 with an arrow", "2 was filled with arrows by 1", "2 became a pincusion for 1"]

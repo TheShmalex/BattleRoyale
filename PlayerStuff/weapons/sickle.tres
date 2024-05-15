@@ -7,4 +7,4 @@ script = ExtResource("1_pmjyg")
 wName = "Sickle"
 meleeLvl = 3
 rangedLvl = 0
-killMessages = ["", "", ""]
+killMessages = ["1 slit 2's throat with a sickle", "1 reaped what they sowed with a sickle, being 2 ", "2 was this year's harvest for 1"]

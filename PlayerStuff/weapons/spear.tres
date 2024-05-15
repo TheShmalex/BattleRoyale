@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_4srs0")
 wName = "Spear"
-meleeLvl = 0
-rangedLvl = 0
-killMessages = ["", "", ""]
+meleeLvl = 2
+rangedLvl = 2
+killMessages = ["1 chucked a spear through 2's spine", "2 was impaled to a tree by 1's spear", "2 tripped onto 1's spear "]

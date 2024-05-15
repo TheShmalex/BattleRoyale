@@ -7,4 +7,4 @@ script = ExtResource("1_pi4pw")
 wName = "Sledgehammer"
 meleeLvl = 2
 rangedLvl = 0
-killMessages = ["", "", ""]
+killMessages = ["1 demolished 2's skull with a sledgehammer", "1 created a giant hole in 2's chest with their sledgehammer", "1 jumped off a roof onto 2 with their sledgehammer"]

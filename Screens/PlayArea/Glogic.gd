@@ -38,7 +38,7 @@ func _ready():
 	roster = $"..".roster
 	players = roster.players
 	addCards()
-
+	spawnPlayer(players[1])
 
 func addCards():
 	for p in players:
@@ -54,8 +54,9 @@ func addCards():
 		cards.append(newPlayerCard)
 		p.weapon = weapons.pick_random()
 		weapons.erase(p.weapon)
-		p.color = colorNames.pick_random()
-		colorNames.erase(p.color)
+		var col = randi_range(0,colorNames.size()-1)
+		p.color = Color(colorNames[col])
+		colorNames.remove_at(col)
 		p.card = newPlayerCard
 		$"../UI/ScrollContainer/VBoxContainer".add_child(newPlayerCard)
 
@@ -76,8 +77,9 @@ func fight(p1 : PlayerResource ,  p2 : PlayerResource):
 		else:
 			%Log.addDeathMessage(p1.weapon, p1, p2)
 			p2.card.disentigrate()
-	print(p1.fName + " - " + str(p1r))
-	print(p2.fName + " - " + str(p2r))
+
+	#print(p1.fName + " - " + str(p1r))
+	#print(p2.fName + " - " + str(p2r))
 
 func rollForCombat(p : PlayerResource):
 	var weapon = p.weapon
@@ -92,3 +94,16 @@ func rollForCombat(p : PlayerResource):
 	for i in die:
 		ans += randi_range(0,2)
 	return ans
+
+func spawnPlayer(p : PlayerResource):
+	var playerIconScene = preload("res://Screens/PlayArea/PlayerIcon.tscn")
+	var newPlayerIcon = playerIconScene.instantiate()
+	newPlayerIcon.player = p
+	$"../mapGrid/Grid".add_child(newPlayerIcon)
+
+func _on_timer_timeout():
+	var p1 = players.pick_random()
+	var p2 = players.pick_random()
+	while p2 == p1:
+		p2 = players.pick_random()
+	fight(p1,p2)
