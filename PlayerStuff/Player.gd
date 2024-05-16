@@ -8,5 +8,7 @@ class_name PlayerResource
 @export var rangedLvl : int
 var index : int
 var card
+var icon
+var alive = true
 
 @export var weapon : WeaponResource

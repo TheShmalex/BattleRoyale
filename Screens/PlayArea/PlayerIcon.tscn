@@ -1,14 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0hmwyc41teyw"]
+[gd_scene load_steps=8 format=3 uid="uid://c0hmwyc41teyw"]
 
 [ext_resource type="Script" path="res://Screens/PlayArea/PlayerIcon.gd" id="1_4n23c"]
 [ext_resource type="Texture2D" uid="uid://bd7horcsacr0v" path="res://Assets/circle.png" id="1_lh8j6"]
+[ext_resource type="Script" path="res://Screens/PlayArea/Range.gd" id="3_es643"]
 [ext_resource type="Texture2D" uid="uid://cusx108x05wis" path="res://Assets/x.png" id="3_poxfc"]
+[ext_resource type="Script" path="res://Screens/PlayArea/Sprite2D.gd" id="4_xtsdb"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wv2u1"]
-radius = 3490.1
+[sub_resource type="CircleShape2D" id="CircleShape2D_ydjrr"]
+radius = 8e+06
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eba06"]
+radius = 1.625e+07
 
 [node name="PlayerIcon" type="Node2D"]
-scale = Vector2(0.01, 0.01)
+scale = Vector2(0.008, 0.008)
 script = ExtResource("1_4n23c")
 
 [node name="Border" type="Sprite2D" parent="."]
@@ -20,16 +25,28 @@ position = Vector2(7.62939e-06, 0)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_lh8j6")
 
-[node name="Range" type="Area2D" parent="."]
+[node name="newDestArea" type="Area2D" parent="."]
+unique_name_in_owner = true
 scale = Vector2(0.01, 0.01)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="newDestArea"]
+scale = Vector2(0.01, 0.01)
+shape = SubResource("CircleShape2D_ydjrr")
+
+[node name="Range" type="Area2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(0.01, 0.01)
+script = ExtResource("3_es643")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
 scale = Vector2(0.01, 0.01)
-shape = SubResource("CircleShape2D_wv2u1")
+shape = SubResource("CircleShape2D_eba06")
 
-[node name="NewDest" type="Node2D" parent="."]
-position = Vector2(7.62939e-06, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="NewDest"]
-scale = Vector2(-5.69237, -5.69237)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 0, 0, 1)
+scale = Vector2(7.025, 7.025)
 texture = ExtResource("3_poxfc")
+script = ExtResource("4_xtsdb")
+
+[node name="NewDestTimer" type="Timer" parent="."]

@@ -10,12 +10,10 @@ func _process(delta):
 	if Input.is_action_just_pressed("Click"):
 		var sp = smokePoof.instantiate()
 		add_child(sp)
-		print(areaMouseIn)	
+		print(areaMouseIn)
 	if get_overlapping_areas().size()>0:
 		areaMouseIn = get_overlapping_areas()[0]
 	else:
 		areaMouseIn = null
-
-
-
-
+	#print(overlaps_area($"/PlayerIcon/newDestArea"))
+	#print("Mouse:" + str(has_overlapping_areas()))

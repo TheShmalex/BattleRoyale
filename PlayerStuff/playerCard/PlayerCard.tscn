@@ -1,10 +1,11 @@
-[gd_scene load_steps=32 format=3 uid="uid://canr5o0nrkhuk"]
+[gd_scene load_steps=34 format=3 uid="uid://canr5o0nrkhuk"]
 
 [ext_resource type="Texture2D" uid="uid://dp8kptpywc167" path="res://Assets/Pixel UI pack 3/06.png" id="1_2o6e4"]
 [ext_resource type="Script" path="res://PlayerStuff/playerCard/PlayerCard.gd" id="1_yxlvh"]
 [ext_resource type="Texture2D" uid="uid://dl15puekqcitx" path="res://Assets/gun.png" id="2_8q53u"]
 [ext_resource type="Resource" uid="uid://dif8y6dmjx223" path="res://PlayerStuff/rosters/HP2/hipClass/alex.tres" id="2_ijaxj"]
 [ext_resource type="Texture2D" uid="uid://d32eqbdnedwr5" path="res://Assets/sword.png" id="3_dtv7u"]
+[ext_resource type="FontFile" uid="uid://dilvqv8odkodi" path="res://Assets/Jersey20-Regular.ttf" id="6_5lgy8"]
 [ext_resource type="Script" path="res://PlayerStuff/playerCard/lNameLabel.gd" id="6_7fntf"]
 [ext_resource type="Script" path="res://PlayerStuff/playerCard/fNameLabel.gd" id="7_8qs0m"]
 [ext_resource type="Script" path="res://PlayerStuff/playerCard/Label2.gd" id="8_ybw5u"]
@@ -157,9 +158,32 @@ tracks/0/keys = {
 "update": 0,
 "values": [1.0]
 }
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:size:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(150, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:custom_minimum_size:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
 
 [sub_resource type="Animation" id="Animation_q84ma"]
 resource_name = "dis"
+length = 1.1
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -167,7 +191,7 @@ tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(1),
+"times": PackedFloat32Array(1.1),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -186,18 +210,61 @@ tracks/1/keys = {
 "update": 0,
 "values": [1.0, 0.0]
 }
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:custom_minimum_size:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(150, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.8, 1.1)
+}
+
+[sub_resource type="Animation" id="Animation_smu87"]
+resource_name = "enigrate"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewportContainer:material:shader_parameter/dissolve_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:custom_minimum_size:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(3.24901, 0.482968),
+"update": 0,
+"values": [0.0, 150.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cxxpl"]
 _data = {
 "RESET": SubResource("Animation_xultm"),
-"dis": SubResource("Animation_q84ma")
+"dis": SubResource("Animation_q84ma"),
+"enigrate": SubResource("Animation_smu87")
 }
 
 [node name="PlayerCard" type="Control"]
-custom_minimum_size = Vector2(400, 150)
+clip_contents = true
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 3
 anchor_right = 0.208333
 anchor_bottom = 0.138889
+offset_right = 4800.0
+offset_bottom = -0.00012207
 script = ExtResource("1_yxlvh")
 player = ExtResource("2_ijaxj")
 metadata/_edit_use_anchors_ = true
@@ -210,8 +277,7 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -126.027
-offset_bottom = -48.6487
+offset_bottom = -0.00012207
 metadata/_edit_use_anchors_ = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
@@ -270,7 +336,8 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_mkrov")
 [node name="lName" type="Label" parent="SubViewportContainer/SubViewport/card/NameContainer"]
 texture_filter = 1
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("6_5lgy8")
+theme_override_font_sizes/font_size = 34
 text = "Lname"
 script = ExtResource("6_7fntf")
 metadata/_edit_use_anchors_ = true
@@ -278,14 +345,16 @@ metadata/_edit_use_anchors_ = true
 [node name="," type="Label" parent="SubViewportContainer/SubViewport/card/NameContainer"]
 texture_filter = 1
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("6_5lgy8")
+theme_override_font_sizes/font_size = 34
 text = ","
 metadata/_edit_use_anchors_ = true
 
 [node name="fName" type="Label" parent="SubViewportContainer/SubViewport/card/NameContainer"]
 texture_filter = 1
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("6_5lgy8")
+theme_override_font_sizes/font_size = 34
 text = "Fname"
 script = ExtResource("7_8qs0m")
 metadata/_edit_use_anchors_ = true
@@ -297,9 +366,13 @@ anchor_left = 0.714875
 anchor_top = 0.186667
 anchor_right = 0.897375
 anchor_bottom = 0.34
-offset_left = 22.05
+offset_left = -11.95
+offset_top = -22.0
 offset_right = 22.05
+offset_bottom = -11.0
 grow_horizontal = 0
+theme_override_fonts/font = ExtResource("6_5lgy8")
+theme_override_font_sizes/font_size = 34
 text = "Weapon:"
 metadata/_edit_use_anchors_ = true
 
@@ -310,24 +383,32 @@ anchor_left = -0.904794
 anchor_top = 1.0
 anchor_right = 0.930822
 anchor_bottom = 2.0
+offset_left = 3.25496
+offset_top = -1.83
+offset_right = 3.25497
+offset_bottom = -1.83
 grow_horizontal = 0
+theme_override_fonts/font = ExtResource("6_5lgy8")
+theme_override_font_sizes/font_size = 34
 horizontal_alignment = 2
 script = ExtResource("8_ybw5u")
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_right = 0.333334
+anchor_bottom = 0.333333
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_nq755")
 script = ExtResource("9_k7pyt")
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_cxxpl")
 }
+autoplay = "enigrate"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

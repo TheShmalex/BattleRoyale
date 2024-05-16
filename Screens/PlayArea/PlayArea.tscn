@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://c1subyoeemka5"]
+[gd_scene load_steps=52 format=3 uid="uid://c1subyoeemka5"]
 
 [ext_resource type="Script" path="res://Screens/PlayArea/MouseTracker.gd" id="1_a8bkx"]
 [ext_resource type="Script" path="res://Screens/PlayArea/Glogic.gd" id="1_clthu"]
@@ -37,9 +37,45 @@
 [ext_resource type="Resource" uid="uid://dw0lgej4p1e87" path="res://PlayerStuff/weapons/spear.tres" id="29_02d7l"]
 [ext_resource type="Resource" uid="uid://cjym8ggc0gc41" path="res://PlayerStuff/weapons/tennisracquet.tres" id="30_7wmnd"]
 [ext_resource type="Resource" uid="uid://dokhvb5u7qru3" path="res://PlayerStuff/weapons/dagger.tres" id="31_uwwp5"]
+[ext_resource type="Script" path="res://Screens/PlayArea/path1.gd" id="34_3o788"]
+[ext_resource type="Texture2D" uid="uid://dh604ox0j1kkn" path="res://Assets/boat.png" id="35_q61qk"]
+[ext_resource type="Texture2D" uid="uid://cyjqy3ptn8sj8" path="res://Assets/wave.png" id="36_xwbmr"]
+[ext_resource type="FontFile" uid="uid://dilvqv8odkodi" path="res://Assets/Jersey20-Regular.ttf" id="37_wf1nj"]
+[ext_resource type="Script" path="res://Screens/PlayArea/SpeedButtons.gd" id="40_8a6g6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l5vvi"]
 radius = 2.0
+
+[sub_resource type="Curve2D" id="Curve2D_lcwpo"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 303.333, 332.951, -6.0257, 4.42412, 6.0257, -4.42412, 424.667, 233.845, -23.9701, 34.1633, 23.9701, -34.1633, 616.417, 104.674, 77.4732, -23.5953, -77.4732, 23.5953, 196.083, 100.219, -31.4428, -16.0285, 31.4428, 16.0285, 138.667, 473.259, 0, 0, 0, 0, 213.417, 414.24, 0, 0, 0, 0, 303.333, 332.951)
+}
+point_count = 7
+
+[sub_resource type="Gradient" id="Gradient_y3dg7"]
+offsets = PackedFloat32Array(0, 0.995984)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_e6wym"]
+gradient = SubResource("Gradient_y3dg7")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bpiai"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+color_ramp = SubResource("GradientTexture1D_e6wym")
+
+[sub_resource type="Curve2D" id="Curve2D_7lrbk"]
+_data = {
+"points": PackedVector2Array(49.3533, -24.7751, -49.3533, 24.7751, 448.5, 940.949, 64.2741, -70.7859, -64.2741, 70.7859, 45.5, 1099.07, -72.3084, 21.2358, 72.3084, -21.2358, 687.917, 1115.78, 41.3191, 64.8871, -41.3191, -64.8871, 752.511, 645.859, 112.48, -50.7299, -112.48, 50.7299, 448.5, 940.949)
+}
+point_count = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_blfco"]
+bg_color = Color(0.6, 0.6, 0.6, 0.603922)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrb36"]
 bg_color = Color(0.113725, 0.105882, 0.109804, 1)
@@ -62,10 +98,10 @@ size_flags_vertical = 4
 script = ExtResource("1_nnf3k")
 roster = ExtResource("3_j7mwk")
 metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
 
 [node name="MouseTracker" type="Area2D" parent="."]
 script = ExtResource("1_a8bkx")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MouseTracker"]
 shape = SubResource("CircleShape2D_l5vvi")
@@ -82,9 +118,14 @@ anchor_bottom = 1.0
 offset_right = -285.184
 offset_bottom = -512.0
 metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
 
 [node name="Grid" type="Node" parent="mapGrid"]
 script = ExtResource("3_cmsep")
+
+[node name="School" type="Marker2D" parent="mapGrid/Grid"]
+unique_name_in_owner = true
+position = Vector2(695, 672)
 
 [node name="MapSprite" type="Sprite2D" parent="mapGrid/Grid"]
 texture_filter = 1
@@ -93,18 +134,477 @@ scale = Vector2(0.923077, 0.898029)
 texture = ExtResource("2_vjde7")
 region_enabled = true
 region_rect = Rect2(277, 213, 1157, 1167)
+metadata/_edit_lock_ = true
+
+[node name="decalCoverings" type="Control" parent="mapGrid/Grid/MapSprite"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 0
+offset_left = 438.0
+offset_top = -388.0
+offset_right = 555.0
+offset_bottom = -320.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 0
+offset_left = 440.917
+offset_top = -464.35
+offset_right = 557.917
+offset_bottom = -396.35
+color = Color(0.133333, 0.117647, 0.12549, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 0
+offset_left = 440.917
+offset_top = -464.35
+offset_right = 557.917
+offset_bottom = -396.35
+color = Color(0.133333, 0.117647, 0.12549, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 0
+offset_left = 426.833
+offset_top = 109.128
+offset_right = 543.833
+offset_bottom = 177.128
+color = Color(0.133333, 0.117647, 0.12549, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 295.0
+offset_right = 472.0
+offset_bottom = 384.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+
+[node name="ColorRect17" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 283.0
+offset_right = 411.0
+offset_bottom = 293.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+
+[node name="ColorRect18" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 244.0
+offset_right = 385.0
+offset_bottom = 275.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+
+[node name="ColorRect19" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 266.0
+offset_right = 317.0
+offset_bottom = 272.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+
+[node name="ColorRect20" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 263.911
+offset_right = 319.0
+offset_bottom = 274.911
+color = Color(0.133333, 0.117647, 0.12549, 1)
+
+[node name="ColorRect21" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 0
+offset_left = 304.417
+offset_top = 258.344
+offset_right = 324.417
+offset_bottom = 269.344
+color = Color(0.133333, 0.117647, 0.12549, 1)
+
+[node name="ColorRect22" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 0
+offset_left = 341.0
+offset_top = 218.0
+offset_right = 384.0
+offset_bottom = 244.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+
+[node name="ColorRect23" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 242.0
+offset_right = 365.0
+offset_bottom = 265.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+
+[node name="ColorRect24" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 0
+offset_left = 328.25
+offset_top = 236.073
+offset_right = 370.25
+offset_bottom = 259.073
+color = Color(0.133333, 0.117647, 0.12549, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 337.0
+offset_right = 296.0
+offset_bottom = 363.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 514.0
+offset_right = 342.0
+offset_bottom = 540.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 514.0
+offset_right = 342.0
+offset_bottom = 540.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect9" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -4.225
+anchor_top = -1.74234
+anchor_right = -4.225
+anchor_bottom = -1.74234
+offset_left = 234.0
+offset_top = 514.0
+offset_right = 342.0
+offset_bottom = 540.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect10" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -6.93333
+anchor_top = 0.345564
+anchor_right = -6.93333
+anchor_bottom = 0.345564
+offset_left = 234.0
+offset_top = 514.0
+offset_right = 342.0
+offset_bottom = 540.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect11" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -13.4063
+anchor_top = 0.0393387
+anchor_right = -13.4063
+anchor_bottom = 0.0393387
+offset_left = 234.0
+offset_top = 514.0
+offset_right = 342.0
+offset_bottom = 540.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect12" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -16.8188
+anchor_top = -18.9467
+anchor_right = -16.8188
+anchor_bottom = -18.9467
+offset_left = 234.0
+offset_top = 514.0
+offset_right = 342.0
+offset_bottom = 540.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect14" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -14.2
+anchor_top = -24.075
+anchor_right = -14.2
+anchor_bottom = -24.025
+offset_left = 234.0
+offset_top = 514.0
+offset_right = 342.0
+offset_bottom = 540.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect15" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -11.8896
+anchor_top = -22.2038
+anchor_right = -11.8896
+anchor_bottom = -22.2038
+offset_left = 234.0
+offset_top = 514.0
+offset_right = 342.0
+offset_bottom = 540.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect16" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -17.45
+anchor_top = -24.2
+anchor_right = -17.45
+anchor_bottom = -23.275
+offset_left = 234.0
+offset_top = 514.0
+offset_right = 342.0
+offset_bottom = 540.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect13" type="ColorRect" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -17.05
+anchor_top = -2.4
+anchor_right = -17.05
+anchor_bottom = -1.475
+offset_left = 234.0
+offset_top = 514.0
+offset_right = 342.0
+offset_bottom = 540.0
+color = Color(0.133333, 0.117647, 0.12549, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Line" type="Sprite2D" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+texture_filter = 1
+position = Vector2(386.505, 339.435)
+scale = Vector2(0.998, 1.86414)
+texture = ExtResource("2_vjde7")
+region_enabled = true
+region_rect = Rect2(1336, 214, 2, 48)
+
+[node name="Line2" type="Sprite2D" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+texture_filter = 1
+position = Vector2(289.25, 340.746)
+scale = Vector2(0.998, 1.86414)
+texture = ExtResource("2_vjde7")
+region_enabled = true
+region_rect = Rect2(1336, 214, 2, 48)
+
+[node name="Line3" type="Sprite2D" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+texture_filter = 1
+position = Vector2(481.53, 152.556)
+scale = Vector2(0.998, 1.86414)
+texture = ExtResource("2_vjde7")
+region_enabled = true
+region_rect = Rect2(1336, 214, 2, 48)
+
+[node name="Line4" type="Sprite2D" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+texture_filter = 1
+position = Vector2(289.525, 516.687)
+scale = Vector2(0.998, 1.86414)
+texture = ExtResource("2_vjde7")
+region_enabled = true
+region_rect = Rect2(1336, 214, 2, 48)
+
+[node name="Line5" type="Sprite2D" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+texture_filter = 1
+position = Vector2(99.6667, 472.145)
+scale = Vector2(0.998, 1.86414)
+texture = ExtResource("2_vjde7")
+region_enabled = true
+region_rect = Rect2(1336, 214, 2, 48)
+
+[node name="Line6" type="Sprite2D" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+texture_filter = 1
+position = Vector2(4.33335, 535.617)
+scale = Vector2(0.998, 1.86414)
+texture = ExtResource("2_vjde7")
+region_enabled = true
+region_rect = Rect2(1336, 214, 2, 48)
+
+[node name="Line7" type="Sprite2D" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+texture_filter = 1
+position = Vector2(-289.25, 532.277)
+scale = Vector2(0.998, 1.86414)
+texture = ExtResource("2_vjde7")
+region_enabled = true
+region_rect = Rect2(1336, 214, 2, 48)
+
+[node name="Line8" type="Sprite2D" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+texture_filter = 1
+position = Vector2(-383.5, 458.782)
+scale = Vector2(0.998, 1.86414)
+texture = ExtResource("2_vjde7")
+region_enabled = true
+region_rect = Rect2(1336, 214, 2, 48)
+
+[node name="Line9" type="Sprite2D" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+texture_filter = 1
+position = Vector2(-383.5, -236.073)
+scale = Vector2(0.998, 1.86414)
+texture = ExtResource("2_vjde7")
+region_enabled = true
+region_rect = Rect2(1336, 214, 2, 48)
+
+[node name="Line10" type="Sprite2D" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+texture_filter = 1
+position = Vector2(-383.5, -420.922)
+scale = Vector2(0.998, 1.86414)
+texture = ExtResource("2_vjde7")
+region_enabled = true
+region_rect = Rect2(1336, 214, 2, 48)
+
+[node name="Line11" type="Sprite2D" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+texture_filter = 1
+position = Vector2(-289.485, -419.808)
+scale = Vector2(0.998, 1.86414)
+texture = ExtResource("2_vjde7")
+region_enabled = true
+region_rect = Rect2(1336, 214, 2, 48)
+
+[node name="Line12" type="Sprite2D" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+texture_filter = 1
+position = Vector2(-188.5, -347.428)
+scale = Vector2(0.998, 1.86414)
+texture = ExtResource("2_vjde7")
+region_enabled = true
+region_rect = Rect2(1336, 214, 2, 48)
+
+[node name="Line13" type="Sprite2D" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+texture_filter = 1
+position = Vector2(481.324, -345.2)
+scale = Vector2(0.75916, 1.86414)
+texture = ExtResource("2_vjde7")
+region_enabled = true
+region_rect = Rect2(1336, 214, 2, 48)
+
+[node name="Line14" type="Sprite2D" parent="mapGrid/Grid/MapSprite/decalCoverings"]
+texture_filter = 1
+position = Vector2(481.279, -424.262)
+scale = Vector2(0.275, 1.864)
+texture = ExtResource("2_vjde7")
+region_enabled = true
+region_rect = Rect2(1336, 214, 2, 48)
+
+[node name="ships" type="Control" parent="mapGrid/Grid/MapSprite"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -599.083
+offset_top = -569.024
+offset_right = -599.083
+offset_bottom = -569.024
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="route1" type="Path2D" parent="mapGrid/Grid/MapSprite/ships"]
+position = Vector2(20.2077, 29.0789)
+scale = Vector2(0.879344, 0.880594)
+curve = SubResource("Curve2D_lcwpo")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="mapGrid/Grid/MapSprite/ships/route1"]
+position = Vector2(155.609, 150.748)
+rotation = -0.684577
+progress = 885.832
+rotates = false
+script = ExtResource("34_3o788")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="mapGrid/Grid/MapSprite/ships/route1/PathFollow2D"]
+position = Vector2(-19.846, -3.65491)
+rotation = 0.684905
+sub_emitter = NodePath(".")
+process_material = SubResource("ParticleProcessMaterial_bpiai")
+texture = ExtResource("36_xwbmr")
+lifetime = 3.0
+speed_scale = 0.5
+draw_order = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="mapGrid/Grid/MapSprite/ships/route1/PathFollow2D"]
+z_index = 1
+position = Vector2(0.24, -15.9)
+rotation = 0.684905
+texture = ExtResource("35_q61qk")
+
+[node name="route2" type="Path2D" parent="mapGrid/Grid/MapSprite/ships"]
+position = Vector2(403.633, -11.1355)
+scale = Vector2(0.962267, 1)
+curve = SubResource("Curve2D_7lrbk")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="mapGrid/Grid/MapSprite/ships/route2"]
+position = Vector2(471.624, 1136.79)
+rotation = -0.684577
+progress = 885.832
+rotates = false
+script = ExtResource("34_3o788")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="mapGrid/Grid/MapSprite/ships/route2/PathFollow2D"]
+position = Vector2(-9.415, 2.72)
+sub_emitter = NodePath(".")
+process_material = SubResource("ParticleProcessMaterial_bpiai")
+texture = ExtResource("36_xwbmr")
+lifetime = 3.0
+speed_scale = 0.5
+draw_order = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="mapGrid/Grid/MapSprite/ships/route2/PathFollow2D"]
+z_index = 1
+position = Vector2(0.239929, -15.8999)
+rotation = -2.45669
+scale = Vector2(1, -1)
+texture = ExtResource("35_q61qk")
+
+[node name="waves" type="Control" parent="mapGrid/Grid/MapSprite"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Land" type="Area2D" parent="mapGrid/Grid"]
 unique_name_in_owner = true
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mapGrid/Grid/Land"]
-position = Vector2(816, 112)
-build_mode = 1
-polygon = PackedVector2Array(-17, -3, -289, 77, -343, 113, -389, 133, -436, 179, -477, 193, -549, 252, -621, 330, -659, 409, -682, 499, -676, 560, -645, 644, -615, 716, -586, 735, -564, 795, -529, 825, -494, 838, -399, 837, -218, 798, -65, 736, 27, 663, 84, 573, 124, 514, 157, 432, 160, 368, 182, 233, 154, 160, 109, 127, 106, 86, 84, 30, 55, 22)
+polygon = PackedVector2Array(655, 149, 682, 144, 700, 132, 747, 125, 782, 111, 809, 111, 855, 126, 890, 141, 901, 149, 904, 164, 911, 176, 920, 193, 931, 246, 961, 269, 979, 287, 995, 346, 996, 366, 988, 397, 986, 464, 980, 470, 974, 479, 971, 536, 942, 592, 941, 619, 932, 628, 908, 671, 891, 702, 870, 731, 869, 737, 856, 751, 850, 754, 801, 814, 774, 836, 748, 852, 674, 878, 639, 893, 623, 900, 568, 914, 487, 932, 430, 943, 425, 945, 422, 950, 333, 951, 311, 948, 299, 944, 295, 943, 294, 940, 300, 936, 298, 933, 288, 929, 268, 925, 258, 915, 250, 904, 249, 895, 237, 870, 225, 848, 219, 842, 202, 824, 190, 807, 188, 802, 188, 796, 167, 751, 159, 726, 131, 638, 135, 625, 138, 583, 141, 563, 146, 549, 167, 491, 175, 483, 191, 444, 198, 439, 230, 401, 237, 395, 256, 373, 266, 360, 287, 344, 321, 320, 337, 306, 362, 296, 397, 278, 408, 267, 418, 253, 444, 232, 462, 229, 500, 209, 512, 202, 536, 188, 589, 173)
 
-[node name="School" type="Marker2D" parent="mapGrid/Grid"]
-unique_name_in_owner = true
-position = Vector2(695, 672)
+[node name="Panel" type="Panel" parent="mapGrid"]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0242268
+anchor_top = 1.52817
+anchor_right = 0.438632
+anchor_bottom = 1.85915
+offset_right = -3.05176e-05
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_blfco")
+metadata/_edit_use_anchors_ = true
+
+[node name="DebugLog" type="RichTextLabel" parent="mapGrid/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0553846
+anchor_top = 0.0744681
+anchor_right = 0.935385
+anchor_bottom = 0.920213
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+scroll_following = true
+metadata/_edit_use_anchors_ = true
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 1
@@ -124,7 +624,6 @@ anchor_right = 0.513772
 anchor_bottom = 0.891466
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/ScrollContainer"]
 custom_minimum_size = Vector2(400, 150)
@@ -175,7 +674,8 @@ anchor_top = 0.900742
 anchor_right = 0.51497
 anchor_bottom = 0.988868
 grow_vertical = 0
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("37_wf1nj")
+theme_override_font_sizes/font_size = 34
 theme_override_styles/normal = SubResource("StyleBoxFlat_wrb36")
 text = "X Students Remain"
 horizontal_alignment = 1
@@ -183,14 +683,69 @@ vertical_alignment = 1
 script = ExtResource("9_56w3f")
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="."]
+[node name="SpeedController" type="HBoxContainer" parent="UI"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0179641
+anchor_top = 0.00556586
+anchor_right = 0.51617
+anchor_bottom = 0.0797774
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("40_8a6g6")
+metadata/_edit_use_anchors_ = true
+
+[node name="Pause" type="Button" parent="UI/SpeedController"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("37_wf1nj")
+theme_override_font_sizes/font_size = 34
+text = "X0
+"
+
+[node name="X0_5" type="Button" parent="UI/SpeedController"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("37_wf1nj")
+theme_override_font_sizes/font_size = 34
+text = "X0.5"
+
+[node name="X1" type="Button" parent="UI/SpeedController"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("37_wf1nj")
+theme_override_font_sizes/font_size = 34
+text = "X1
+"
+
+[node name="X3" type="Button" parent="UI/SpeedController"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("37_wf1nj")
+theme_override_font_sizes/font_size = 34
+text = "X3"
+
+[node name="X5" type="Button" parent="UI/SpeedController"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("37_wf1nj")
+theme_override_font_sizes/font_size = 34
+text = "X5
+"
+
+[node name="Button" type="Button" parent="UI"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.960417
-anchor_top = 0.0138889
-anchor_right = 0.992708
-anchor_bottom = 0.0712963
+anchor_left = 0.963021
+anchor_top = 0.0166667
+anchor_right = 0.995312
+anchor_bottom = 0.0740741
+offset_left = -42.1192
+offset_top = 0.0333347
+offset_right = -29.0821
+offset_bottom = 0.0333405
 grow_horizontal = 0
 theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
@@ -205,10 +760,14 @@ expand_icon = true
 script = ExtResource("6_65q8j")
 metadata/_edit_use_anchors_ = true
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
-autostart = true
+[node name="PlayerSpawner" type="Timer" parent="."]
+wait_time = 10.0
 
 [connection signal="area_entered" from="MouseTracker" to="MouseTracker" method="_on_area_entered"]
 [connection signal="clickedArea" from="MouseTracker" to="mapGrid/Grid" method="areaClicked"]
-[connection signal="timeout" from="Timer" to="Glogic" method="_on_timer_timeout"]
+[connection signal="pressed" from="UI/SpeedController/Pause" to="UI/SpeedController" method="pause"]
+[connection signal="pressed" from="UI/SpeedController/X0_5" to="UI/SpeedController" method="X0_5"]
+[connection signal="pressed" from="UI/SpeedController/X1" to="UI/SpeedController" method="X1"]
+[connection signal="pressed" from="UI/SpeedController/X3" to="UI/SpeedController" method="X3"]
+[connection signal="pressed" from="UI/SpeedController/X5" to="UI/SpeedController" method="X5"]
+[connection signal="timeout" from="PlayerSpawner" to="Glogic" method="_on_player_spawner_timeout"]

@@ -33,32 +33,32 @@ var colorNames = [
 	"BF9F8B"
 ]
 
-
 func _ready():
+	$"../PlayerSpawner".wait_time = %SpeedController.spawnBase
 	roster = $"..".roster
 	players = roster.players
-	addCards()
-	spawnPlayer(players[1])
+	await get_tree().create_timer(2).timeout
+	$"../PlayerSpawner".start()
+	spawnPlayer(players[0])
 
-func addCards():
-	for p in players:
-		for i in 4:
-			var num = randi_range(0,1)
-			if num == 1:
-				p.meleeLvl += 1
-			else:
-				p.rangedLvl += 1
-		var playerCard = preload("res://PlayerStuff/playerCard/PlayerCard.tscn")
-		var newPlayerCard = playerCard.instantiate()
-		newPlayerCard.player = p
-		cards.append(newPlayerCard)
-		p.weapon = weapons.pick_random()
-		weapons.erase(p.weapon)
-		var col = randi_range(0,colorNames.size()-1)
-		p.color = Color(colorNames[col])
-		colorNames.remove_at(col)
-		p.card = newPlayerCard
-		$"../UI/ScrollContainer/VBoxContainer".add_child(newPlayerCard)
+func addCard(p : PlayerResource):
+	for i in 4:
+		var num = randi_range(0,1)
+		if num == 1:
+			p.meleeLvl += 1
+		else:
+			p.rangedLvl += 1
+	var playerCard = preload("res://PlayerStuff/playerCard/PlayerCard.tscn")
+	var newPlayerCard = playerCard.instantiate()
+	newPlayerCard.player = p
+	cards.append(newPlayerCard)
+	p.weapon = weapons.pick_random()
+	weapons.erase(p.weapon)
+	var col = randi_range(0,colorNames.size()-1)
+	p.color = Color(colorNames[col])
+	colorNames.remove_at(col)
+	p.card = newPlayerCard
+	$"../UI/ScrollContainer/VBoxContainer".add_child(newPlayerCard)
 
 func fight(p1 : PlayerResource ,  p2 : PlayerResource): 
 	var p1r = rollForCombat(p1)
@@ -95,15 +95,23 @@ func rollForCombat(p : PlayerResource):
 		ans += randi_range(0,2)
 	return ans
 
+
 func spawnPlayer(p : PlayerResource):
+	addCard(p)
 	var playerIconScene = preload("res://Screens/PlayArea/PlayerIcon.tscn")
 	var newPlayerIcon = playerIconScene.instantiate()
 	newPlayerIcon.player = p
 	$"../mapGrid/Grid".add_child(newPlayerIcon)
+	
+	
 
-func _on_timer_timeout():
-	var p1 = players.pick_random()
-	var p2 = players.pick_random()
-	while p2 == p1:
-		p2 = players.pick_random()
-	fight(p1,p2)
+func _on_player_spawner_timeout():
+	for i in players:
+		if i.icon == null:
+			spawnPlayer(i)
+			break
+
+func addToDebugLog(s: String):
+	$"../mapGrid/Panel/DebugLog".add_text(s)
+	$"../mapGrid/Panel/DebugLog".add_text("\n")
+
